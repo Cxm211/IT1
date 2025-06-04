@@ -21,7 +21,7 @@ We systematically analyze **320 real-world bugs** from three widely-used Rust in
 ## 📁 Repository Structure
 - [`taxonomy`](./taxonomy/) – Detailed taxonomy of symptoms, causes, triggers, and fix patterns.
 
-- [`labelling_bugs`](./labelling_bugs/) – Final labels for all 320 issues across tools.  
+- [`labelling_bugs`](./labelling_bugs/) – Final labels for all 320 issues across tools in both `xlsx` and `csv` format.  
   Each entry includes:
   - **ID**: A unique identifier defined in our dataset.
   - **Status**: Whether the issue is `open` or `closed` at the point of collection (Feb 2025).

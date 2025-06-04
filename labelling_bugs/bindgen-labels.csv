@@ -1,0 +1,287 @@
+﻿id,Status,Title,Issue Link,PR or Commit Link,Trigger,Symptom,Cause (sub-category),Cause (high-level),Fix Pattern
+1,Closed,Objective-C method fragment needs keyword escape,https://github.com/rust-lang/rust-bindgen/issues/2242,https://github.com/rust-lang/rust-bindgen/pull/2359,Function,Compilation Error,Invalid Identifier,IDRE,
+2,Open,Objective-C anonymous category need to be merged to main type,https://github.com/rust-lang/rust-bindgen/issues/2241,,Class,Compilation Error,Duplicate Definition,IDRE,
+3,Closed,derive/impl fail inconsistently for blocked uint32_t/etc,https://github.com/rust-lang/rust-bindgen/issues/2211,,Tool Configuration Option;Struct,Incorrect Output,Missing Derived Traits;Misbehaving Configuration Option,DTE;TBE,
+4,Closed,Duplicate definitions for Write1,https://github.com/rust-lang/rust-bindgen/issues/2202,https://github.com/rust-lang/rust-bindgen/pull/2341,Function,Compilation Error,Duplicate Definition,IDRE,
+5,Closed,"Panic with ""not an item"" with nested templates, nested classes, inheritance, and constructors",https://github.com/rust-lang/rust-bindgen/issues/2075,https://github.com/rust-lang/rust-bindgen/commit/d1d2eb62d36c462416a606c680e6b4ba4716daab,Template;Class;Struct,Crash,Panic,TRE,Wrapping in if
+6,Closed,Panic resolving typerefs,https://github.com/rust-lang/rust-bindgen/issues/2039,,Template;Type Alias;Class,Crash,Panic,TRE,
+7,Closed,Panic when a template argument refers to a function-local C++ class,https://github.com/rust-lang/rust-bindgen/issues/2036,https://github.com/rust-lang/rust-bindgen/pull/2037,Template;Function;Struct,Crash,Panic,TRE,Guard Clause
+8,Closed,A struct with a flexible array member breaks alignment of other fields,https://github.com/rust-lang/rust-bindgen/issues/2017,,Flexible Array Member;Struct,Incorrect Output,Offset Mismatch,MEM,
+9,Closed,Build error generated in output if a function takes an argument named `sym` and `--dynamic-loading` is specified,https://github.com/rust-lang/rust-bindgen/issues/2014,https://github.com/rust-lang/rust-bindgen/commit/b21086cc3ba5aaeea53082e0618733a1b354daab,Tool Configuration Option; Function,Compilation Error,Incorrect Data Type;Name Shadowing Error,UFC;IDRE,
+10,Closed,Docstrings missing for constant values in C++ headers.,https://github.com/rust-lang/rust-bindgen/issues/1995,https://github.com/rust-lang/rust-bindgen/pull/2027,Comment,Incorrect Output,Incorrect Comment,UFC,Add If block;Reorder Code Block
+11,Closed,objc_interface_type.h generates non-compiling code.,https://github.com/rust-lang/rust-bindgen/issues/1954,https://github.com/rust-lang/rust-bindgen/pull/2176,Struct;Class,Compilation Error,Missing Derived Traits;Missing Lifetime Bound,DTE;INC,
+12,Closed,Wrong layout generated for some structures with complex bit fields,https://github.com/rust-lang/rust-bindgen/issues/1947,https://github.com/rust-lang/rust-bindgen/pull/1950,Bitfield;Struct,Incorrect Output,Size Mismatch,MEM,
+13,Closed,Dyn keyword is not escaped.,https://github.com/rust-lang/rust-bindgen/issues/1946,https://github.com/rust-lang/rust-bindgen/pull/1951,Union,Compilation Error,Invalid Identifier,IDRE,Add match arm
+14,Closed,Wrong bindings generated for some pack(2) struct,https://github.com/rust-lang/rust-bindgen/issues/1934,https://github.com/rust-lang/rust-bindgen/pull/1935,Struct,Incorrect Output,Size Mismatch,MEM,Mutate Condition;Insert if-else block;Insert Conditional Branch
+15,Closed,*_enum() takes item name after parse_callbacks processing instead of before,https://github.com/rust-lang/rust-bindgen/issues/1891,https://github.com/rust-lang/rust-bindgen/commit/f4d10c360453e91973cd08189af6185bb7c964c9,Tool Configuration Option;Enum,Incorrect Output,Misbehaving Configuration Option,TBE,Mutate method chain
+16,Closed,Multidimensional array binding has incorrect mutability.,https://github.com/rust-lang/rust-bindgen/issues/1849,https://github.com/rust-lang/rust-bindgen/pull/1861,Array;Constant,Incorrect Output,Incorrect Mutability;Incorrect Function Signature,UFC,Add condition in assign
+17,Closed,Bindgen generates incorrect return types for C++ class constructors in wasm32-unknown-emscripten,https://github.com/rust-lang/rust-bindgen/issues/1822,https://github.com/rust-lang/rust-bindgen/pull/1877,Class;Function,Incorrect Output,Incorrect Function Signature,UFC,Wrapping in if
+18,Closed,Confusing behavior of regex parameters,https://github.com/rust-lang/rust-bindgen/issues/1783,https://github.com/rust-lang/rust-bindgen/pull/2345,Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,Wrapping in method
+19,Closed,Bindgen generates wrong bingings for function,https://github.com/rust-lang/rust-bindgen/issues/1778,https://github.com/rust-lang/rust-bindgen/commit/b1a1ebc918e44f4aa928878dae20fa7be6c87043,Function;Type Alias,Incorrect Output,Incorrect Function Signature,UFC,Mutate Method Chain;Wrapping in else
+20,Closed,Rust method wrapper is still emitted for blacklisted functions,https://github.com/rust-lang/rust-bindgen/issues/1774,https://github.com/rust-lang/rust-bindgen/pull/1775,Tool Configuration Option;Class;Function,Incorrect Output,Misbehaving Configuration Option,TBE,Guard Clause
+21,Closed,mixing `header` and `header_contents` always panics,https://github.com/rust-lang/rust-bindgen/issues/1771,https://github.com/rust-lang/rust-bindgen/commit/51778893c4cb18eb11cbfe83a72046f7cb0f3eac,Tool Configuration Option,Crash,Panic,TRE,Mutate Method Chain;add if block
+22,Closed,--@size_t-@is-@usize not working if the function is named malloc,https://github.com/rust-lang/rust-bindgen/issues/1770,,Tool Configuration Option;Primitive Datatype,Incorrect Output,Misbehaving Configuration Option,TBE,
+23,Closed,bindgen fails to generate comments (at all),https://github.com/rust-lang/rust-bindgen/issues/1748,,Comment,Incorrect Output,Incorrect Comment,UFC,
+24,Closed,An attribute on C callback function leads to wrong bindings,https://github.com/rust-lang/rust-bindgen/issues/1729,,Function;Type Alias,Incorrect Output,Incorrect Function Signature,UFC,
+25,Closed,extern const array is unexpectedly mut,https://github.com/rust-lang/rust-bindgen/issues/1727,https://github.com/rust-lang/rust-bindgen/pull/1730,Array;Constant,Incorrect Output,Incorrect Mutability,UFC,Add condition in assign
+26,Closed,BINDGEN_EXTRA_CLANG_ARGS for command line mode,https://github.com/rust-lang/rust-bindgen/issues/1723,https://github.com/rust-lang/rust-bindgen/commit/f34e4103f304500c96d332f5cecc9067c980d0f9,Tool Configuration Option,Compilation Error,Misbehaving Configuration Option,TBE,
+27,Closed,the trait bound `[u8; 44]: std::default::Default` is not satisfied,https://github.com/rust-lang/rust-bindgen/issues/1718,https://github.com/rust-lang/rust-bindgen/pull/1719,Struct;Bitfield,Compilation Error,Wrong Derived Trait,DTE,Unwarpping in else;Mutate Condition;Add if block 
+28,Closed,Packed bitfield struct produces incorrect size struct (and maybe alignment?),https://github.com/rust-lang/rust-bindgen/issues/1716,https://github.com/rust-lang/rust-bindgen/pull/1717,Struct;Bitfield;Attribute,Incorrect Output,Size Mismatch,MEM,Wrapping in else
+29,Closed,bindgen chokes on non-empty macro prefix to namespaces,https://github.com/rust-lang/rust-bindgen/issues/1676,https://github.com/rust-lang/rust-bindgen/pull/1678,Namespace;Macro,Crash,Panic,TRE,Mutate match arm
+30,Closed,size_t vs usize,https://github.com/rust-lang/rust-bindgen/issues/1671,https://github.com/rust-lang/rust-bindgen/pull/1688,Primitive Datatype,Incorrect Output,Incorrect Data Type,UFC,Delete match arm
+31,Closed,Infinite Loop/Recursion/Recursion/stack overflow,https://github.com/rust-lang/rust-bindgen/issues/1608,,Template;Struct,Hang,Infinite Loop/Recursion,TBE,
+32,Closed,"Fail to generate bindings for functions with calling convention ""aapcs-vfp"" for armv7a",https://github.com/rust-lang/rust-bindgen/issues/1607,,Function;Attribute;Target Platform,Compilation Error,Target Compatibility Issue,CPI,
+33,Closed,Octave oct.h unresolved import `self::super::super::u32`',https://github.com/rust-lang/rust-bindgen/issues/1599,https://github.com/rust-lang/rust-bindgen/pull/1653,Template;Enum;Primitive Datatype;Tool Configuration Option,Compilation Error,Incorrect import path,IMRE,Add condition in if
+34,Closed,rustc nightly fails with error: trait objects without an explicit `dyn` are deprecated,https://github.com/rust-lang/rust-bindgen/issues/1598,https://github.com/rust-lang/rust-bindgen/pull/1603,,Compilation Error,Version Compatibility Issue,CPI,
+35,Closed,Infinite Loop/Recursion/Recursion on small input with alignof,https://github.com/rust-lang/rust-bindgen/issues/1590,https://github.com/rust-lang/rust-bindgen/pull/1591,Template;Class,Hang,Infinite Loop/Recursion,TBE,Mutate method chain
+36,Closed,Extraneous padding in struct with bitfield and flexible array member,https://github.com/rust-lang/rust-bindgen/issues/1589,https://github.com/rust-lang/rust-bindgen/pull/1592,Flexible Array Member;Struct;Bitfield,Incorrect Output,Size Mismatch,MEM,Add match arm
+37,Closed,Bindgen incorrectly generates pointers to block pointers.,https://github.com/rust-lang/rust-bindgen/issues/1580,https://github.com/rust-lang/rust-bindgen/pull/1582,Pointer;Struct,Incorrect Output,Incorrect Mutability,UFC,Mutate match arm
+38,Closed,0.49.1 breaks nostd compilation,https://github.com/rust-lang/rust-bindgen/issues/1574,,,Crash,Version Compatibility Issue,CPI,
+39,Closed,repr(align(0)) for std::basic_string causing build error,https://github.com/rust-lang/rust-bindgen/issues/1565,https://github.com/rust-lang/rust-bindgen/pull/1595,Union,Compilation Error,Platform Compatibility Issue,CPI,Guard Clause
+40,Open,Bad structure padding in FreeBSD's nvme.h,https://github.com/rust-lang/rust-bindgen/issues/1563,,Struct,Incorrect Output,Size Mismatch,MEM,
+41,Closed,bindgen generates union with u128 member for alignment which is UB for FFI,https://github.com/rust-lang/rust-bindgen/issues/1560,,Union,Incorrect Output,Unsafe FFI,USC,
+42,Closed,Bindgen gets parameter names wrong in callbacks,https://github.com/rust-lang/rust-bindgen/issues/1535,https://github.com/rust-lang/rust-bindgen/pull/1536,Function;Pointer,Incorrect Output,Incorrect Function Signature,UFC,
+43,Closed,bindgen startup is incredibly slow,https://github.com/rust-lang/rust-bindgen/issues/1532,,,Performance,Slow,TBE,
+44,Closed,#[must_use] is not applied to functions when __attribute((warn_unused_result)) is used through a macro defined in an included file.,https://github.com/rust-lang/rust-bindgen/issues/1518,,Tool Configuration Option;Attribute,Incorrect Output,Misbehaving Configuration Option,TBE,
+45,Closed,Generated code for inner class of template-class doesn't use type-parameter,https://github.com/rust-lang/rust-bindgen/issues/1514,https://github.com/rust-lang/rust-bindgen/pull/1515,Template;Struct,Compilation Error,Missing Generic Argument,INC,Wrapping in method;mutate method chain
+46,Closed,0.47.1 breaks emmintrin.h on macOS,https://github.com/rust-lang/rust-bindgen/issues/1506,,,Crash,Version Compatibility Issue,CPI,
+47,Closed,"build fails with (signal: 11, SIGSEGV: invalid memory reference)",https://github.com/rust-lang/rust-bindgen/issues/1504,,,Crash,SIGSEGV,TRE,
+48,Closed,Bindgen outputs warnings in generated bindings file,https://github.com/rust-lang/rust-bindgen/issues/1502,,,Incorrect Output,Unexpected  Warning,TBE,
+49,Closed,Bindgen gets bindings for function pointer as return-type wrong.,https://github.com/rust-lang/rust-bindgen/issues/1500,https://github.com/rust-lang/rust-bindgen/pull/1508,Pointer;Function,Incorrect Output,Incorrect Function Signature,UFC,Mutate match arm
+50,Closed,bindgen produces an E0588 error when dealing with a packed struct with union.,https://github.com/rust-lang/rust-bindgen/issues/1498,https://github.com/rust-lang/rust-bindgen/commit/9134679a98703879ddd081fe14b64cfae074de4a,Struct;Union;Attribute,Compilation Error,Packed and aligned attribute conflict issue,MEM,Reorder Code Block
+51,Closed,"`#define S ""...\n""` inconsistent with `static const char S[] = ""...\n""`",https://github.com/rust-lang/rust-bindgen/issues/1468,,Macro;String;Constant,Incorrect Output,Incorrect Constant Value,UFC,
+52,Closed,Performance regression in 0.44.0 for headers that (transitively) include AVX512F intrinsics,https://github.com/rust-lang/rust-bindgen/issues/1465,https://github.com/rust-lang/rust-bindgen/pull/1467,Attribute,Performance,Slow,TBE,Add condition in assign
+53,Closed,Panic because of an invalid Ident,https://github.com/rust-lang/rust-bindgen/issues/1464,https://github.com/rust-lang/rust-bindgen/pull/1513,Template;Class;Function,Compilation Error,Invalid Identifier,IDRE,Guard Clause
+54,Closed,__BindgenUnionField definition was missing from generated code even when in use,https://github.com/rust-lang/rust-bindgen/issues/1457,https://github.com/rust-lang/rust-bindgen/pull/1458,Union,Compilation Error,Missing Type Definition,INC,
+55,Closed,Copy not derived when using whitelist_recursively(false),https://github.com/rust-lang/rust-bindgen/issues/1454,https://github.com/rust-lang/rust-bindgen/pull/2007,Tool Configuration Option,Incorrect Output,Missing Derived Traits;Misbehaving Configuration Option,DTE;TBE,Add if block
+56,Closed,rustfmt_bindings(true) doesn't format the output file,https://github.com/rust-lang/rust-bindgen/issues/1445,,Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,
+57,Closed,"""Calculated wrong layout"" for structs with reference member",https://github.com/rust-lang/rust-bindgen/issues/1443,https://github.com/rust-lang/rust-bindgen/pull/1531,Struct;Reference,Incorrect Output,Size Mismatch,MEM,Mutate method argument
+58,Closed,C++: --enable-cxx-namespaces can fail to generate type Aliass,https://github.com/rust-lang/rust-bindgen/issues/1435,https://github.com/rust-lang/rust-bindgen/pull/1436,Tool Configuration Option;Namespace;Type Alias,Compilation Error,Missing Type Definition;Missing Alias Definition,INC,Mutate Method Chain;mutate condition
+59,Closed,Regression: Long literals ending with 'L' parsed as floats,https://github.com/rust-lang/rust-bindgen/issues/1424,,Primitive Datatype,Incorrect Output,Version Compatibility Issue;Incorrect Data Type,CPI;UFC,
+60,Closed,Output under bindgen::EnumVariation::ModuleConsts missing ::Type?,https://github.com/rust-lang/rust-bindgen/issues/1418,https://github.com/rust-lang/rust-bindgen/pull/1419,Type Alias;Enum,Compilation Error,Misbehaving Configuration Option;Incorrect Function Signature,TBE;UFC,Reorder Code Block
+61,Closed,Incorrect return type when using __stdcall,https://github.com/rust-lang/rust-bindgen/issues/1402,https://github.com/rust-lang/rust-bindgen/commit/c75b62d1a19b79a053996642f4915269e38f877c,Type Alias;Function;Pointer,Incorrect Output,Incorrect Function Signature,UFC,Reorder Code Block
+62,Closed,Deriving PartialOrd and Ord for enum,https://github.com/rust-lang/rust-bindgen/issues/1395,https://github.com/rust-lang/rust-bindgen/pull/1396,Enum,Incorrect Output,Missing Derived Traits;Misbehaving Configuration Option,DTE;TBE,
+63,Closed,Automated test failure: union with alignment attrs,https://github.com/rust-lang/rust-bindgen/issues/1393,https://github.com/rust-lang/rust-bindgen/pull/1394,Union,Incorrect Output,Alignment Mismatch,MEM,Reorder Code Block
+64,Closed,Better warnings for types with the same name as rust types,https://github.com/rust-lang/rust-bindgen/issues/1382, https://github.com/rust-lang/rust-bindgen/pull/1798,Primitive Datatype;Type Alias,Compilation Error,Alias Cycle;Invalid Identifier,IDRE,Add match arm
+65,Closed,Properly handle enum constants near u32::max_value(),https://github.com/rust-lang/rust-bindgen/issues/1380,https://github.com/rust-lang/rust-bindgen/pull/1381,Primitive Datatype;Shift,Incorrect Output,nan,,Guard Clause
+66,Closed,incomplete array in struct alignment is wrong,https://github.com/rust-lang/rust-bindgen/issues/1359,https://github.com/rust-lang/rust-bindgen/pull/1592,Struct;Flexible Array Member,Incorrect Output,Alignment Mismatch,MEM,Add match arm
+67,Closed,__attribute__((overloadable)) function has wrong name,https://github.com/rust-lang/rust-bindgen/issues/1350,https://github.com/rust-lang/rust-bindgen/pull/1434,Function;Attribute,Incorrect Output,Incorrect Function Signature,UFC,Reorder Code Block;Wrapping in if
+68,Closed,Large bitfield structs don't meet `__BindgenBitfieldUnit` parameter bounds,https://github.com/rust-lang/rust-bindgen/issues/1325,,Struct;Bitfield,Compilation Error,Wrong Derived Trait,DTE,
+69,Closed,Auto-Incorrect Output,https://github.com/rust-lang/rust-bindgen/issues/1318,,Struct;Attribute,Incorrect Output,,,
+70,Closed,"Generating derives for Hash, Default and Debug for an Union",https://github.com/rust-lang/rust-bindgen/issues/1285,https://github.com/rust-lang/rust-bindgen/pull/1294,Struct;Union,Compilation Error,Wrong Derived Trait,DTE,Mutate method argument
+71,Closed,Wrong padding size generated from different arch,https://github.com/rust-lang/rust-bindgen/issues/1284,https://github.com/rust-lang/rust-bindgen/pull/1289,Struct;Target Platform,Incorrect Output,Target Compatibility Issue;Size Mismatch,CPI;MEM,
+72,Closed,Opaque types do not honor no-* flags,https://github.com/rust-lang/rust-bindgen/issues/1238,https://github.com/rust-lang/rust-bindgen/pull/1241,Struct;Type Alias;Tool Configuration Option,Incorrect Output,Wrong Derived Trait;Misbehaving Configuration Option,DTE;TBE,Add condition in if
+73,Closed,"regression from 0.30: ""..."" disappear from function pointer",https://github.com/rust-lang/rust-bindgen/issues/1216,https://github.com/rust-lang/rust-bindgen/pull/1217,Function,Incorrect Output,Incorrect Function Signature,UFC,Reorder Code Block
+74,Closed,Bindgen 0.31 emits link_name but no function prototype (regression from 0.30),https://github.com/rust-lang/rust-bindgen/issues/1150,,Function,Compilation Error,Missing Function Definition,INC,
+75,Closed,"Panic in bindgen: ""Not an item""",https://github.com/rust-lang/rust-bindgen/issues/1127,https://github.com/rust-lang/rust-bindgen/pull/1128,Template;Struct,Crash,Panic,TRE,Mutate Method Chain
+76,Closed,Rustfmt mangles generated bindings with `union`,https://github.com/rust-lang/rust-bindgen/issues/1120,,Union,Compilation Error,nan,,
+77,Closed,Incorrect derive partial eq/Hash for struct contains incomplete array field ,https://github.com/rust-lang/rust-bindgen/issues/1093,https://github.com/rust-lang/rust-bindgen/pull/1094,Struct;Flexible Array Member,Compilation Error,Wrong Derived Trait,DTE,Add branch in statement
+78,Closed,Undefined references for native library,https://github.com/rust-lang/rust-bindgen/issues/1046,,Function;Target Platform,Compilation Error,Incorrect Link Name,UFC,
+79,Closed,Unsigned global set to -1,https://github.com/rust-lang/rust-bindgen/issues/1040,https://github.com/rust-lang/rust-bindgen/pull/1081,Primitive Datatype:Constant,Compilation Error,Incorrect Constant Value,UFC,Wrapping in if
+80,Closed,=--@use-@core bindings refers std,https://github.com/rust-lang/rust-bindgen/issues/1015,,Tool Configuration Option;Primitive Datatype,Incorrect Output,Misbehaving Configuration Option,TBE,
+81,Closed,Incorrect layout with large bitfield,https://github.com/rust-lang/rust-bindgen/issues/1007,https://github.com/rust-lang/rust-bindgen/pull/1060,Struct;Bitfield,Incorrect Output,Size Mismatch,MEM,Add match block
+82,Closed,Can't compile `tests/expectations` on macOS version 10.12.6,https://github.com/rust-lang/rust-bindgen/issues/1004,https://github.com/rust-lang/rust-bindgen/pull/1026,Class;Function,Compilation Error,Platform Compatibility Issue,CPI,
+83,Closed,variadic function must have C or cdecl calling convention,https://github.com/rust-lang/rust-bindgen/issues/997,https://github.com/rust-lang/rust-bindgen/pull/1369,Attribute;Function,Compilation Error,,,Guard Clause
+84,Closed,"Bindgen generates getters and setters which access memory beyond ""self""",https://github.com/rust-lang/rust-bindgen/issues/954,https://github.com/rust-lang/rust-bindgen/pull/1149,Bitfield;Struct,Incorrect Output,,,Mutate method argument
+85,Closed,bindgen emitted Rust code that won't compile,https://github.com/rust-lang/rust-bindgen/issues/951,https://github.com/rust-lang/rust-bindgen/pull/675,Enum;Macro,Compilation Error,Duplicate Definition,IDRE,Guard Clause
+86,Closed,".opaque_type(""std::string"")",https://github.com/rust-lang/rust-bindgen/issues/949,,Namespace;Class;Tool Configuration Option,Compilation Error,Missing Type Definition;Misbehaving Configuration Option,INC;TBE,
+87,Closed,android system headers -> cyclic type Aliass,https://github.com/rust-lang/rust-bindgen/issues/946,https://github.com/rust-lang/rust-bindgen/pull/1239,Type Alias;Target Platform,Compilation Error,Duplicate Definition;Alias Cycle,IDRE,Mutate method chain
+88,Closed,Global enum in the wrong namespace,https://github.com/rust-lang/rust-bindgen/issues/888,https://github.com/rust-lang/rust-bindgen/pull/926,Namespace;Enum,Compilation Error,Missing Type Definition;Missing Alias Definition,INC,Add match block
+89,Closed,loops in the name graph,https://github.com/rust-lang/rust-bindgen/issues/839,,Type Alias;Enum,Compilation Error,Alias Cycle,IDRE,
+90,Closed,bitfield methods not generated,https://github.com/rust-lang/rust-bindgen/issues/816,,Struct;Bitfield,Incorrect Output,Missing Function Definition;Version Compatibility Issue,INC;CPI,
+91,Closed,Protected member functions in opaque c++ types,https://github.com/rust-lang/rust-bindgen/issues/807,https://github.com/rust-lang/rust-bindgen/pull/808,Class;Function;Tool Configuration Option,Compilation Error,Missing Type Definition,INC,Reorder Code Block
+92,Closed,Opaque types with static members produce invalid bindings,https://github.com/rust-lang/rust-bindgen/issues/801,https://github.com/rust-lang/rust-bindgen/pull/802,Class;Function;Tool Configuration Option,Compilation Error,Missing Type Definition,INC,Wrapping in if
+93,Closed,Support markdown in C++ doc comments.,https://github.com/rust-lang/rust-bindgen/issues/800,https://github.com/rust-lang/rust-bindgen/pull/2347,Comment,Incorrect Output,Incorrect Comment,UFC,
+94,Closed,Incorrect `__cxx11` part in symbol names in generated rust code,https://github.com/rust-lang/rust-bindgen/issues/789,https://github.com/rust-lang/rust-bindgen/pull/792,Namespace;Function,Compilation Error,Missing Type Definition;Incorrect  Identifier,INC;UFC,Mutate method chain
+95,Closed,Bitfield constructors may overflow the stack on codegen phase.,https://github.com/rust-lang/rust-bindgen/issues/775,,Bitfield;Struct,Crash,Infinite Loop/Recursion,TBE,
+96,Closed,Testing instantiation with argument of a type that we didn't generate bindings for,https://github.com/rust-lang/rust-bindgen/issues/769,https://github.com/rust-lang/rust-bindgen/pull/770,Template;Class;Type Alias;Tool Configuration Option,Compilation Error,Missing Type Definition,INC,
+97,Closed,prepend_enum_name(false) doesn't work on constified enum variants,https://github.com/rust-lang/rust-bindgen/issues/755,https://github.com/rust-lang/rust-bindgen/pull/759,Enum;Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,Mutate method argument;Wrapping in if
+98,Closed,wasm32 target does not generate class functions.,https://github.com/rust-lang/rust-bindgen/issues/751,,Class;Function;Target Platform,Incorrect Output,Target Compatibility Issue;Missing Function Definition,CPI;INC,
+99,Closed,Bitfields in unions are broken,https://github.com/rust-lang/rust-bindgen/issues/744,https://github.com/rust-lang/rust-bindgen/pull/1066,Union;Bitfield,Incorrect Output,Version Compatibility Issue,CPI,Wrapping in if
+100,Closed,on 32-bit  platform (e.g. PI) including sys/param.h causes 'shift left with overflow error'.,https://github.com/rust-lang/rust-bindgen/issues/739,https://github.com/rust-lang/rust-bindgen/commit/21a44aa8de944adb84772a3544a5644ef15a945a,Struct;Bitfield;Shift,Compilation Error,Overflow Error;Platform Compatibility Issue,MEM;CPI,Wrapping in else
+101,Closed,Can't place a member in the remaining space of a bitfield.,https://github.com/rust-lang/rust-bindgen/issues/734,https://github.com/rust-lang/rust-bindgen/commit/d8440cb4f14d9aa071f2e4bc49d802c5eac181a0,Struct;Bitfield,Incorrect Output,Size Mismatch,MEM,Add If block;Mutate match arm
+102,Closed,Generate struct of wrong size with bitfields,https://github.com/rust-lang/rust-bindgen/issues/726,https://github.com/rust-lang/rust-bindgen/pull/736,Class;Enum;Bitfield,Incorrect Output,Size Mismatch,MEM,
+103,Closed,Improper virtual method tracking with template parameters.,https://github.com/rust-lang/rust-bindgen/issues/691,https://github.com/rust-lang/rust-bindgen/pull/692,Class;Template,Incorrect Output,nan,,Delete condition in if
+104,Closed,enum and define with the same name collide,https://github.com/rust-lang/rust-bindgen/issues/687,https://github.com/rust-lang/rust-bindgen/pull/1243,Enum;Macro,Compilation Error,Duplicate Definition,IDRE,Mutate method chain;add if block
+105,Closed,Incomplete/zero-sized arrays don't affect struct alignment.,https://github.com/rust-lang/rust-bindgen/issues/684,https://github.com/rust-lang/rust-bindgen/pull/1477,Struct;Flexible Array Member,Incorrect Output,Alignment Mismatch,MEM,
+106,Closed,Nested namespace definitions aren't supported,https://github.com/rust-lang/rust-bindgen/issues/677,https://github.com/rust-lang/rust-bindgen/pull/680,Namespace,Compilation Error,nan,,Add match arm
+107,Closed,Hopefully the last stylo derived issues,https://github.com/rust-lang/rust-bindgen/issues/674,https://github.com/rust-lang/rust-bindgen/pull/675,Template;Type Alias;Type Alias,Compilation Error,Missing Generic Argument,INC,Reorder Code Block;Guard clause
+108,Closed,No type definitions for macro defined struct fields in structs,https://github.com/rust-lang/rust-bindgen/issues/672,https://github.com/rust-lang/rust-bindgen/pull/644,Macro;Struct,Compilation Error,Missing Type Definition,INC,Delete condition in if
+109,Closed,Even some more stylo derived errors,https://github.com/rust-lang/rust-bindgen/issues/662,https://github.com/rust-lang/rust-bindgen/pull/663,Template;Class,Compilation Error,Missing Generic Argument,INC,
+110,Closed,Debug trait is derived when a struct contains __bindgen_padding,https://github.com/rust-lang/rust-bindgen/issues/648,https://github.com/rust-lang/rust-bindgen/pull/857,Struct,Compilation Error,Wrong Derived Trait,DTE,Guard Clause
+111,Closed,Struct typedef in class fails with wrong struct size,https://github.com/rust-lang/rust-bindgen/issues/639,https://github.com/rust-lang/rust-bindgen/commit/bcf1ba38ac9f67ead8642b0b36d745f498e84f24,Struct;Class;Type Alias,Incorrect Output,Size Mismatch,MEM,Wrapping in else
+112,Closed,Codegen errors creduced from stylo,https://github.com/rust-lang/rust-bindgen/issues/638,https://github.com/rust-lang/rust-bindgen/commit/bce13307645172be62e8895e82d9362f0c4e4fd6,Template;Class,Incorrect Output,Wrong Derived Trait;Missing Generic Argument,DTE;INC,Mutate method chain
+113,Closed,"bindgen generates erroneous rust code: error: expected identifier, found `_`",https://github.com/rust-lang/rust-bindgen/issues/631,https://github.com/rust-lang/rust-bindgen/pull/1008,,Compilation Error,Invalid Identifier,IDRE,Add match arm
+114,Closed,Test call-conv-field fails on macOS,https://github.com/rust-lang/rust-bindgen/issues/593,https://github.com/rust-lang/rust-bindgen/commit/ddfc32d9e304a5179f3474b2732da97612cc7637,Function,Incorrect Output,Incorrect Link Name;Platform Compatibility Issue,UFC;CPI,Mutate condition in if;Mutate function name
+115,Closed,assertion failed: ctx.resolve_type_through_type_refs(decl).is_opaque(),https://github.com/rust-lang/rust-bindgen/issues/574,https://github.com/rust-lang/rust-bindgen/pull/575,Template;Class,Crash,Panic,TRE,
+116,Closed,Even more failing layout tests with SpiderMonkey bindings,https://github.com/rust-lang/rust-bindgen/issues/573,https://github.com/rust-lang/rust-bindgen/pull/581,Template;Class,Incorrect Output,Size Mismatch,MEM,
+117,Closed,Non-type template parameters and failing layout tests,https://github.com/rust-lang/rust-bindgen/issues/569,https://github.com/rust-lang/rust-bindgen/pull/572,Template;Class,Incorrect Output,Size Mismatch,MEM,Wrapping in if;Reorder Code Block
+118,Closed,Bindgen layout test fails with linux/virtio_net.h,https://github.com/rust-lang/rust-bindgen/issues/568,,Flexible Array Member;Struct;Attribute,Incorrect Output,Size Mismatch,MEM,
+119,Closed,Panic with C++ template templates,https://github.com/rust-lang/rust-bindgen/issues/555,,Template;Struct;Class,Crash,Panic,TRE,
+120,Closed,Wrong layout for empty struct in C mode,https://github.com/rust-lang/rust-bindgen/issues/551,https://github.com/rust-lang/rust-bindgen/pull/552,Struct,Incorrect Output,Size Mismatch,MEM,Wrapping in if
+121,Closed,ignored __stdcall,https://github.com/rust-lang/rust-bindgen/issues/547,,Function,Compilation Error,,,
+122,Closed,"Bindgen can't translate `#pragma pack(n)` into `#[repr(packed = ""n"")]`",https://github.com/rust-lang/rust-bindgen/issues/537,https://github.com/rust-lang/rust-bindgen/pull/1485,Struct,Incorrect Output,Alignment Mismatch,MEM,Wrapping in if;Mutate match arm
+123,Closed,Code for inner struct is not generated,https://github.com/rust-lang/rust-bindgen/issues/527,https://github.com/rust-lang/rust-bindgen/pull/532/commits/ea39b98f8d0df40e853cd86c973f71a82f75b7cd,Struct;Union,Compilation Error,Missing Type Definition,INC,Add If block;mutate condition
+124,Closed,pointer constness is applied to pointee,https://github.com/rust-lang/rust-bindgen/issues/511,,Pointer;Constant,Incorrect Output,Incorrect Mutability,UFC,
+125,Closed,const array arguments are translated into *mut,https://github.com/rust-lang/rust-bindgen/issues/509,https://github.com/rust-lang/rust-bindgen/pull/513,Array;Constant,Incorrect Output,Incorrect Mutability;Incorrect Function Signature,UFC,Mutate Method Chain
+126,Closed,Generating invalid code for Aliass that do not use their template parameters,https://github.com/rust-lang/rust-bindgen/issues/505,https://github.com/rust-lang/rust-bindgen/pull/544,Template;Type Alias,Compilation Error,Unused Type Parameter,IRC,
+127,Closed,Incorrect item parenthood while referencing incomplete types without a previous declaration.,https://github.com/rust-lang/rust-bindgen/issues/482,https://github.com/rust-lang/rust-bindgen/commit/7e1b7d98d1da5a449ae18f6f60bac29b9079b9ab,Struct;Pointer,Incorrect Output,,,Guard Clause
+128,Closed,Investigate why we see UnresolvedTypeRef in Item's TypeCollector impl,https://github.com/rust-lang/rust-bindgen/issues/450,,,Crash,Version Compatibility Issue,CPI,
+129,Closed,Instantiating a template with a template instantiation (eg Template1<Template2<Type>>) causes us to generate bad bindings,https://github.com/rust-lang/rust-bindgen/issues/446,,Template;Namespace,Compilation Error,Unused Type Parameter,IRC,
+130,Closed,"build-script-build (signal: 11, SIGSEGV: invalid memory reference)",https://github.com/rust-lang/rust-bindgen/issues/439,https://github.com/rust-lang/rust-bindgen/pull/516,,Crash,SIGSEGV,TRE,
+131,Closed,Typedefs in namespaces may be broken in master.,https://github.com/rust-lang/rust-bindgen/issues/433,https://github.com/rust-lang/rust-bindgen/pull/436,Type Alias;Namespace,Compilation Error,nan,,
+132,Closed,Comments are copied verbatim without checking if they might be invalid,https://github.com/rust-lang/rust-bindgen/issues/426,https://github.com/rust-lang/rust-bindgen/pull/791,Comment,Compilation Error,Incorrect Comment,UFC,Mutate method chain
+133,Closed,Missing template argument for inner type typedef.,https://github.com/rust-lang/rust-bindgen/issues/422,,Template;Type Alias,Compilation Error,Missing Generic Argument;Incorrect Function Signature,INC;UFC,
+134,Closed,Support 128-bit aligned unions,https://github.com/rust-lang/rust-bindgen/issues/412,,Struct,Compilation Error,Wrong Derived Trait,DTE,
+135,Closed,"Typedef type in whitelisted function's argument not in generated bindings, compilation failure",https://github.com/rust-lang/rust-bindgen/issues/410,https://github.com/rust-lang/rust-bindgen/pull/411,Namespace;Function;Tool Configuration Option,Compilation Error,Misbehaving Configuration Option;Missing Type Definition,TBE;INC,Mutate match arm
+136,Closed,Invalid type identifier generation on `template <typename T> class Foo {     typedef T (FunctionPtr)(); };`,https://github.com/rust-lang/rust-bindgen/issues/405,https://github.com/rust-lang/rust-bindgen/issues/405,Template;Type Alias,Compilation Error,Incorrect Function Signature;Invalid Identifier,UFC;IDRE,Add condition in if
+137,Closed,"bindgen fails with panic: ""C'mon: Continue""",https://github.com/rust-lang/rust-bindgen/issues/388,,Template;Namespace,Crash,Panic,TRE,
+138,Closed,C++ decltype syntax leaking into Rust code,https://github.com/rust-lang/rust-bindgen/issues/381,,Type Alias,Compilation Error,nan,,
+139,Closed,derive(Debug) on struct containing array that is too big for derive(Debug),https://github.com/rust-lang/rust-bindgen/issues/372,https://github.com/rust-lang/rust-bindgen/commit/bc08b355b2daf10565d368a87462c6d882460e55,Struct,Compilation Error,Wrong Derived Trait,DTE,Reorder Code Block
+140,Closed,bindgen generates duplicate definitions,https://github.com/rust-lang/rust-bindgen/issues/359,,Namespace,Compilation Error,Duplicate Definition,IDRE,
+141,Closed,"""Should have been resolved after parsing""",https://github.com/rust-lang/rust-bindgen/issues/355,https://github.com/rust-lang/rust-bindgen/pull/357,Type Alias;Enum,Crash,Panic,TRE,
+142,Closed,"libbindgen fails with ""How?""",https://github.com/rust-lang/rust-bindgen/issues/353,https://github.com/rust-lang/rust-bindgen/pull/354,Type Alias;Function,Crash,Panic,TRE,Add match arm
+143,Closed,Our polyfill for `__float128` should have 16 byte alignment,https://github.com/rust-lang/rust-bindgen/issues/317,,Primitive Datatype,Incorrect Output,Alignment Mismatch,MEM,
+144,Closed,The link options are ignored.,https://github.com/rust-lang/rust-bindgen/issues/104,,Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,
+145,Closed,Deduplicate statics,https://github.com/rust-lang/rust-bindgen/issues/47,https://github.com/rust-lang/rust-bindgen/commit/8b4115959a63788a087f683615834233f3ba0e85,,Compilation Error,Duplicate Definition,IDRE,Wrap if statement
+146,Open,`--clang-macro-fallback` duplicate definitions,https://github.com/rust-lang/rust-bindgen/issues/3071,,Macro;Enum;Tool Configuration Option,Compilation Error,Duplicate Definition,IDRE,
+147,Open,"`--clang-macro-fallback` interaction with `-Wp,-MMD,file.d`",https://github.com/rust-lang/rust-bindgen/issues/3070,,Macro;Tool Configuration Option,Compilation Error,Misbehaving Configuration Option,TBE,
+148,Open,`--clang-macro-fallback` interaction with `-include`,https://github.com/rust-lang/rust-bindgen/issues/3069,,Macro;Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,
+149,Open,Types with flexible array member generic does not propagate to other types using the type,https://github.com/rust-lang/rust-bindgen/issues/2939,,Flexible Array Member;Struct,Incorrect Output,Missing Generic Argument,INC,
+150,Open,"How can I get more information about ""Should have a used entry for the template arg""?",https://github.com/rust-lang/rust-bindgen/issues/2938,,Template,Crash,Panic,TRE,
+151,Open,Packed struct with DST fails to compile,https://github.com/rust-lang/rust-bindgen/issues/2936,,Struct;Flexible Array Member,Compilation Error,Missing Wrapper,INC,
+152,Open,Stack overflow when computing item name including <filesystem> on windows,https://github.com/rust-lang/rust-bindgen/issues/2929,,,Crash,Panic,TRE,
+153,Open,Silently wrong code generated for enums in templated classes,https://github.com/rust-lang/rust-bindgen/issues/2871,,Class;Enum;Constant,Incorrect Output,Incorrect Constant Value,UFC,
+154,Open,Inappropriate generated type for function-returning-function,https://github.com/rust-lang/rust-bindgen/issues/2713,,Function;Pointer,Incorrect Output,Incorrect Function Signature,UFC,
+155,Open,Clippy will warn on `use bindgen::CargoCallbacks;` regardless of the usage,https://github.com/rust-lang/rust-bindgen/issues/2712,,Tool Configuration Option,Incorrect Output,Unexpected  Warning,TBE,
+156,Open,`cargo test` is broken despite specified `--rust-target 1.47`,https://github.com/rust-lang/rust-bindgen/issues/2277,,Macro,Incorrect Output,Version Compatibility Issue,CPI,
+157,Open," __attribute__((aligned(2), packed)) generates both repr(packed) and repr(aligned)",https://github.com/rust-lang/rust-bindgen/issues/2240,,Struct;Attribute,Compilation Error,Packed and aligned attribute conflict issue,MEM,
+158,Open,Implemented derives fail when packed,https://github.com/rust-lang/rust-bindgen/issues/2221,,Struct;Attribute,Compilation Error,Alignment Mismatch,MEM,
+159,Open,`#pragma pack(1)` struct containing another packed struct is not packed itself.,https://github.com/rust-lang/rust-bindgen/issues/2189,,Struct;,Incorrect Output,Missing Attribute,INC,
+160,Open,Very strange cwd-dependent behavior,https://github.com/rust-lang/rust-bindgen/issues/2187,,Union,Incorrect Output,Unsafe FFI,USC,
+161,Open,`Not an item` panic for incomplete union,https://github.com/rust-lang/rust-bindgen/issues/2160,,Template;Union,Crash,Panic,TRE,
+162,Open,Tagged unions inside template fail to build.,https://github.com/rust-lang/rust-bindgen/issues/2157,,Template;Union,Compilation Error,Missing Wrapper,INC,
+163,Open,C Atomics are not converted to equivalent atomics in Rust,https://github.com/rust-lang/rust-bindgen/issues/2151,,Primitive Datatype,Incorrect Output,Incorrect Data Type,UFC,
+164,Open,can't parse msvc inline __asm ,https://github.com/rust-lang/rust-bindgen/issues/2034,,Target Platform,Compilation Error,Target Compatibility Issue,CPI,
+165,Open,Renaming a `using` defined template type lose generic definition,https://github.com/rust-lang/rust-bindgen/issues/2010,,Template;Type Alias,Compilation Error,Missing Generic Argument,INC,
+166,Open,`_bindgen_union_align` field in generated Rust union results in garbage data on AArch64 (e.g. Apple Silicon),https://github.com/rust-lang/rust-bindgen/issues/1973,,Union,Incorrect Output,Platform Compatibility Issue,CPI,
+167,Open,"Build fails with (signal: 11, SIGSEGV: invalid memory reference)",https://github.com/rust-lang/rust-bindgen/issues/1972,,,Crash,SIGSEGV,TRE,
+168,Open,c++ constexpr breaks with Mac OS native clang,https://github.com/rust-lang/rust-bindgen/issues/1948,,,Crash,Version Compatibility Issue,CPI,
+169,Open,bindgen does not emit functions for wasm32-unknown-emscripten,https://github.com/rust-lang/rust-bindgen/issues/1941,,Function;Target Platform,Incorrect Output,Target Compatibility Issue;Missing Function Definition,CPI;INC,
+170,Open,Float constants with exponents are not parsed in macros,https://github.com/rust-lang/rust-bindgen/issues/1928,,Primitive Datatype;Macro;Constant,Incorrect Output,Missing Constant Definition,INC,
+171,Open,bindgen hangs on c++ header,https://github.com/rust-lang/rust-bindgen/issues/1918,,Template,Hang,Infinite Loop/Recursion,TBE,
+172,Open,"Bindings fail to compile with ""the name ... is defined multiple times"" and ""cycle detected when computing type of ...""",https://github.com/rust-lang/rust-bindgen/issues/1914,,Template;Type Alias,Compilation Error,Duplicate Definition;Alias Cycle,IDRE,
+173,Open,"Bindings fail to compile with ""recursive type .. has infinte size"" and ""cycle detected when computing drop-check constraints""",https://github.com/rust-lang/rust-bindgen/issues/1913,,Template;Type Alias;Struct,Compilation Error,Alias Cycle,IDRE,
+174,Open,"bindings fail to compile with ""the name ... is defined multiple times""",https://github.com/rust-lang/rust-bindgen/issues/1911,,Template;Type Alias,Compilation Error,Duplicate Definition,IDRE,
+175,Open,Bindings fail to compile with 'cannot find type ... in this scope',https://github.com/rust-lang/rust-bindgen/issues/1909,,Template,Compilation Error,Missing Generic Argument,INC,
+176,Open,C++ class method pointer treated as C function pointer,https://github.com/rust-lang/rust-bindgen/issues/1894,,Class;Function;Pointer,Incorrect Output,Size Mismatch,MEM,
+177,Open,[Objc] Objective-c category names are not unique and can cause duplicate names,https://github.com/rust-lang/rust-bindgen/issues/1889,,Class,Compilation Error,Duplicate Definition,IDRE,
+178,Open,Doesn't handle `static const` structs correctly,https://github.com/rust-lang/rust-bindgen/issues/1888,,Struct;Static,Incorrect Output,nan,,
+179,Open,"bad type recognition, despite explicit suffix",https://github.com/rust-lang/rust-bindgen/issues/1875,,Primitive Datatype;Macro,Incorrect Output,Incorrect Data Type,UFC,
+180,Open,bindgen shouldn't generate f32 for c floats,https://github.com/rust-lang/rust-bindgen/issues/1851,,Primitive Datatype,Incorrect Output,Incorrect Data Type,UFC,
+181,Open,bindgen does not generate destructors if the class inherits a virtual destructor,https://github.com/rust-lang/rust-bindgen/issues/1843,,Class,Incorrect Output,Missing Function Definition,INC,
+182,Open,std::vector<int>::iterator creates trouble,https://github.com/rust-lang/rust-bindgen/issues/1839,,Namespace;Vector,Compilation Error,Duplicate Definition;Alias Cycle,IDRE,
+183,Open,Invalid generated code with C++ templated static constant.,https://github.com/rust-lang/rust-bindgen/issues/1838,,Template;Class,Compilation Error,Missing Generic Argument,INC,
+184,Open,Stack overflow when running into C++ union with variadic templates,https://github.com/rust-lang/rust-bindgen/issues/1836,,,Crash,Infinite Loop/Recursion,TBE,
+185,Open,Incorrect doc-comments generated for enum variants,https://github.com/rust-lang/rust-bindgen/issues/1829,,Enum;Comment,Incorrect Output,Incorrect Comment,UFC,
+186,Open,Bindings generation are broken for cross-compilation on MacOS,https://github.com/rust-lang/rust-bindgen/issues/1780,,,Compilation Error,Target Compatibility Issue,CPI,
+187,Open,Panic with 'Unable to get layout information?',https://github.com/rust-lang/rust-bindgen/issues/1768,,Struct;Template;Union,Crash,Panic,TRE,
+188,Open,Bindgen tries to use MSVC headers when using x86_64-pc-windows-gnu target,https://github.com/rust-lang/rust-bindgen/issues/1760,,Target Platform,Compilation Error,Target Compatibility Issue,CPI,
+189,Open,mishandling of aligned typedefs,https://github.com/rust-lang/rust-bindgen/issues/1753,,Type Alias;Struct,Incorrect Output,Size Mismatch,MEM,
+190,Open,const struct member becomes mut if type not defined,https://github.com/rust-lang/rust-bindgen/issues/1747,,Struct;Pointer;Constant,Incorrect Output,Incorrect Mutability,UFC,
+191,Open,cannot build a rust file using std::complex,https://github.com/rust-lang/rust-bindgen/issues/1738,,Template,Compilation Error,Duplicate Definition;Alias Cycle,IDRE,
+192,Open,Bindgen Incorrectly Mangles C++ Struct/Class Destructor with MSVC ABI,https://github.com/rust-lang/rust-bindgen/issues/1725,,Class;Function;Struct,Incorrect Output,Incorrect Link Name;Platform Compatibility Issue,UFC;CPI,
+193,Open,C++ std::function types are translated into [u128; 3usize],https://github.com/rust-lang/rust-bindgen/issues/1724,,Type Alias;Tool Configuration Option,Incorrect Output,Unsafe FFI;Misbehaving Configuration Option,USC;TBE,
+194,Open,Blacklisting functions/items doesn't seem to work with Blocks,https://github.com/rust-lang/rust-bindgen/issues/1707,,Class;Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,
+195,Open,bad bindings for weird alignments,https://github.com/rust-lang/rust-bindgen/issues/1695,,Struct,Incorrect Output,Size Mismatch,MEM,
+196,Open,Extra padding added in Windows to packed struct with bitfields,https://github.com/rust-lang/rust-bindgen/issues/1692,,Struct;Bitfield;Attribute,Incorrect Output,Size Mismatch;Platform Compatibility Issue,MEM;CPI,
+197,Open,Bad bindings for empty C struct on windows,https://github.com/rust-lang/rust-bindgen/issues/1683,,Struct,Incorrect Output,Platform Compatibility Issue,CPI,
+198,Open,Infinite Loop/Recursion/Recursion in bindgen::ir::ty::Type::safe_canonical_type,https://github.com/rust-lang/rust-bindgen/issues/1679,,Template;Struct,Hang,Infinite Loop/Recursion,TBE,
+199,Open,error[E0428]: the name `__node_pointer` is defined multiple times,https://github.com/rust-lang/rust-bindgen/issues/1662,,Template;Class;Type Alias,Compilation Error,Duplicate Definition;Alias Cycle,IDRE,
+200,Open,Do not derive Clone/Copy/etc for opaque types,https://github.com/rust-lang/rust-bindgen/issues/1656,,Struct,Incorrect Output,Wrong Derived Trait,DTE,
+201,Open,bindgen is slow in a particular project,https://github.com/rust-lang/rust-bindgen/issues/1624,,,Performance,Slow,TBE,
+202,Open,Generated bindings don't compile,https://github.com/rust-lang/rust-bindgen/issues/1609,,Template;Struct,Compilation Error,Missing Generic Argument,INC,
+203,Open,`--no-derive-copy` causes all union bindings to use `__BindgenUnionField` even when a native Rust union would be safe,https://github.com/rust-lang/rust-bindgen/issues/1569,,Union;Tool Configuration Option,Incorrect Output,Unsafe FFI;Misbehaving Configuration Option,USC;TBE,
+204,Open,"Blacklisting doesn't hide inner types, and the template analysis gets confused.",https://github.com/rust-lang/rust-bindgen/issues/1559,,Template;Struct;Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,
+205,Open,bindgen gets confused with arrays in generics.,https://github.com/rust-lang/rust-bindgen/issues/1557,,Template;Struct,Compilation Error,Missing Generic Argument,INC,
+206,Open,RISC-V target not passed on correctly to clang,https://github.com/rust-lang/rust-bindgen/issues/1555,,Target Platform,Crash,nan,,
+207,Open,bindgen doesn't like mozilla::HashSet / mozilla::HashMap in Linux32,https://github.com/rust-lang/rust-bindgen/issues/1547,,Bitfield,Compilation Error,Platform Compatibility Issue,CPI,
+208,Open,=--@target flag addition in BindgenContext could cause issues.,https://github.com/rust-lang/rust-bindgen/issues/1544,,Tool Configuration Option,Crash,Misbehaving Configuration Option,TBE,
+209,Open,E0587 error on packed and aligned structures from C,https://github.com/rust-lang/rust-bindgen/issues/1538,,Struct;Attribute,Compilation Error,Packed and aligned attribute conflict issue,MEM,
+210,Open,Wrong layout for generic union when not used untagged unions.,https://github.com/rust-lang/rust-bindgen/issues/1503,,Struct;Union,Incorrect Output,Size Mismatch,MEM,
+211,Open,Possibly failing to detect template parameter T,https://github.com/rust-lang/rust-bindgen/issues/1496,,Template,Compilation Error,Missing Generic Argument,INC,
+212,Open,whitelist_recursively sees through blacklisted types,https://github.com/rust-lang/rust-bindgen/issues/1455,,Struct;Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,
+213,Open,Bitfields should be packed into earlier fields if alignment allows so.,https://github.com/rust-lang/rust-bindgen/issues/1377,,Struct;Bitfield,Incorrect Output,Size Mismatch;Alignment Mismatch,MEM,
+214,Open,Bindgen fail to generate bindings for struct.,https://github.com/rust-lang/rust-bindgen/issues/1314,,Struct;Bitfield,Incorrect Output,Size Mismatch;Alignment Mismatch,MEM,
+215,Open,Getting the type of a method generates dubious results.,https://github.com/rust-lang/rust-bindgen/issues/1219,,Class;Target Platform,Compilation Error,,,
+216,Open,Inconsistent opaque type representation,https://github.com/rust-lang/rust-bindgen/issues/1194,,Template;Type Alias,Incorrect Output,Incorrect Data Type,UFC,
+217,Open,bindgen can't generate thread local variables correctly,https://github.com/rust-lang/rust-bindgen/issues/1187,,,Incorrect Output,Missing Attribute,INC,
+218,Open,Struct containing a pointer to multi-dimensional array that has one zero sized dimension.,https://github.com/rust-lang/rust-bindgen/issues/1153,,Struct;Flexible Array Member,Incorrect Output,Alignment Mismatch,MEM,
+219,Open,Replaces annotations don't work with base types,https://github.com/rust-lang/rust-bindgen/issues/1144,,Primitive Datatype;Type Alias,Incorrect Output,Incorrect Data Type,UFC,
+220,Open,Hang in the test-case from #1127 with extra assertions.,https://github.com/rust-lang/rust-bindgen/issues/1129,,Template;Struct;Type Alias,Hang,Infinite Loop/Recursion,TBE,
+221,Open,PartialOrd for opaque?,https://github.com/rust-lang/rust-bindgen/issues/1013,,,Incorrect Output,Missing Derived Traits,DTE,
+222,Open,bitfield_align_2.rs test fails to build on Windows,https://github.com/rust-lang/rust-bindgen/issues/1009,,Primitive Datatype,Compilation Error,Platform Compatibility Issue;Incorrect Data Type,CPI;UFC,
+223,Open,Thread 'bindgen_test_layout_header' panicked at 'assertion failed: `(left == right)`,https://github.com/rust-lang/rust-bindgen/issues/943,,Struct;Attribute,Compilation Error,Packed and aligned attribute conflict issue,MEM,
+224,Open,structure layout using __aligned__ attribute is incorrect,https://github.com/rust-lang/rust-bindgen/issues/867,,Struct;Attribute,Compilation Error,Size Mismatch,MEM,
+225,Open,generated function has an argument which shadows a generated static,https://github.com/rust-lang/rust-bindgen/issues/840,,Struct;Constant,Compilation Error,Name Shadowing Error,IDRE,
+226,Open,C++ template with nested declaration and out-of-line definition,https://github.com/rust-lang/rust-bindgen/issues/798,,Template,Compilation Error,Missing Generic Argument,INC,
+227,Open,Wrong ABI used for small C++ classes on Linux.,https://github.com/rust-lang/rust-bindgen/issues/778,,Struct;Function,Incorrect Output,Platform Compatibility Issue,CPI,
+228,Open,"Include template arguments in instantiations' names (support marking ""nested"" instantiations as opaque)",https://github.com/rust-lang/rust-bindgen/issues/774,,Template,Incorrect Output,nan,,
+229,Open,More bitfield brokenness,https://github.com/rust-lang/rust-bindgen/issues/743,,Struct;Bitfield,Incorrect Output,Size Mismatch,MEM,
+230,Open,SIGSEGV running rust-bindgen on Objective-C headers,https://github.com/rust-lang/rust-bindgen/issues/665,,Class,Crash,SIGSEGV,TRE,
+231,Open,bindgen very inconsistent with generated Rust types for opaque C++ types,https://github.com/rust-lang/rust-bindgen/issues/652,,Template;Type Alias,Incorrect Output,Incorrect Data Type,UFC,
+232,Open,Constructors depend on memmovable fields or RVO.,https://github.com/rust-lang/rust-bindgen/issues/607,,Struct,Incorrect Output,Missing Function Definition,INC,
+233,Open,Emit wrong layout with inheriting from zero-sized type parameters,https://github.com/rust-lang/rust-bindgen/issues/586,,Template;Class,Incorrect Output,Size Mismatch,MEM,
+234,Open,Invalid code generated when a struct contains fields called `type` and `type_`,https://github.com/rust-lang/rust-bindgen/issues/507,,,Compilation Error,Duplicate Definition,IDRE,
+235,Open,Wrong memory layout when handle virtual inheritance,https://github.com/rust-lang/rust-bindgen/issues/465,,Class,Incorrect Output,Alignment Mismatch,MEM,
+236,Open,We can generate non-whitelisted structs using opaque items,https://github.com/rust-lang/rust-bindgen/issues/453,,Tool Configuration Option,Incorrect Output,Misbehaving Configuration Option,TBE,
+237,Open,Differently aligned fields may make inheritance not work properly.,https://github.com/rust-lang/rust-bindgen/issues/380,,Class,Incorrect Output,Size Mismatch,MEM,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,, 

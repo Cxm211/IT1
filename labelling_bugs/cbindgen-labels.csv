@@ -1,0 +1,68 @@
+﻿id,Status,Title,Issue Link,PR or Commit Link,Trigger,Symptom,Cause (sub-category),Cause (high-level),Fix Pattern
+1,Closed,Incorrect (outdated?) `fetch_all_dependencies` config suggestion,https://github.com/mozilla/cbindgen/issues/936,,Dependent Crate;Tool Configuration Option,Crash,Unexpected Warning,TBE,
+2,Closed,Code generated from u64 bitflags may have undefined behavior,https://github.com/mozilla/cbindgen/issues/849,,Primitive Datatype,Crash,Overflow Error,MEM,
+3,Open,Field has incomplete type for recursive types definitions (declaration order),https://github.com/mozilla/cbindgen/issues/832,,Struct;Type Alias,Compilation Error,Missing Type Definition;Incorrect Declaration Order,INC;UFC,
+4,Closed,Rust's `char` is not guaranteed to be ABI-compatible with C++'s `uint32_t`,https://github.com/mozilla/cbindgen/issues/814,,Primitive Datatype,Incorrect output,Unsafe FFI,USC,
+5,Closed,`cbindgen:prefix-with-name=false` comment does not override toml value `enum.prefix_with_name=true`,https://github.com/mozilla/cbindgen/issues/808,https://github.com/mozilla/cbindgen/pull/1006,Tool Configuration Option;Enum,Incorrect output,Misbehaving Configuration Option,TBE,Mutate Condition in if
+6,Closed,export.mangle remove_underscores not respected for enums,https://github.com/mozilla/cbindgen/issues/705,https://github.com/mozilla/cbindgen/commit/cbd4260bdc5c3ce50dd7ff14cb7c175e3f9544ad,Tool Configuration Option;Enum,Incorrect output,Misbehaving Configuration Option,TBE,
+7,Closed,Fails to parse `cast` crate,https://github.com/mozilla/cbindgen/issues/665,,Dependent Crate;Tool Configuration Option,Crash,Version Compatibility Issue;Crate/Module Parsing Failure,CPI;IMRE,
+8,Closed,A better error message for unsupported unnamed parameters,https://github.com/mozilla/cbindgen/issues/543,https://github.com/mozilla/cbindgen/pull/550,Function;Primitive Datatype,Compilation Error,Missing Function Definition,INC,
+9,Closed,"Broken self-referencing structs with C mode and style=""type""",https://github.com/mozilla/cbindgen/issues/533,https://github.com/mozilla/cbindgen/pull/615,Struct;Tool Configuration Option,Compilation Error,,,Mutate method chain;Mutate condition
+10,Closed,cbindgen should not map [type; N] function args,https://github.com/mozilla/cbindgen/issues/528,https://github.com/mozilla/cbindgen/pull/540,Function;Array,Compilation Error,Incorrect Function Signature,UFC,Guard clause
+11,Closed,panic: Result has 2 params but is being instantiated with 1 values,https://github.com/mozilla/cbindgen/issues/527,,Enum,Crash,Panic,TRE,
+12,Closed,Wrong output for static arrays,https://github.com/mozilla/cbindgen/issues/476,https://github.com/mozilla/cbindgen/pull/479,Static;Array,Compilation Error,,,
+13,Closed,Fix generated typedefs for function types without arguments,https://github.com/mozilla/cbindgen/issues/470,https://github.com/mozilla/cbindgen/pull/473,Type Alias;Function,Incorrect output,Incorrect Function Signature,UFC,Mutate method argument
+14,Closed,C-style enum sentinel is broken,https://github.com/mozilla/cbindgen/issues/458,https://github.com/mozilla/cbindgen/pull/459,Enum;Tool Configuration Option,Compilation Error,Duplicated Definition,IDRE,Reorder Code Block;Mutate method argument
+15,Closed,"""--pretty=expanded fails after calling cbindgen in cdylib crate""",https://github.com/mozilla/cbindgen/issues/457,https://github.com/mozilla/cbindgen/pull/671,Tool Configuration Option,Compilation Error,,,
+16,Closed,`doc` attribute doesn't behave like rustc does,https://github.com/mozilla/cbindgen/issues/442,https://github.com/mozilla/cbindgen/pull/454,Comment,Incorrect output,Incorrect Comment,UFC,Mutate method chain
+17,Closed,uchar.h is missing on macOS,https://github.com/mozilla/cbindgen/issues/423,https://github.com/mozilla/cbindgen/pull/459,Primitive Datatype,Compilation Error,Missing Import Statement;Platform Compatibility Issue,IMRE;CPI,Mutate method chain
+18,Closed,Raw identifier is not generated correctly,https://github.com/mozilla/cbindgen/issues/410,https://github.com/mozilla/cbindgen/pull/724,,Incorrect output,,,Mutate method chain
+19,Closed,cbindgen panics parsing sodiumoxide crate,https://github.com/mozilla/cbindgen/issues/381,https://github.com/mozilla/cbindgen/commit/ea6ea24740fb2f8fc52dd921e3b889959bcf873d,Dependent Crate;Tool Configuration Option,Crash,Crate/Module Parsing Failure,IMRE,Add match arm
+20,Closed,Rust char is not wchar_t e.g. on Windows,https://github.com/mozilla/cbindgen/issues/373,https://github.com/mozilla/cbindgen/pull/396,Primitive Datatype,Incorrect output,Incorrect Data Type;Platform Compatibility Issue,UFC;CPI,Add match arm
+21,Closed,Escape `Double`,https://github.com/mozilla/cbindgen/issues/368,https://github.com/mozilla/cbindgen/pull/483,Enum,Compilation Error,Invalid Identifier,IDRE,Mutate Condition in if
+22,Closed,"cbindgen panic: ""unable to find generic path""",https://github.com/mozilla/cbindgen/issues/350,,Dependent Crate,Crash,Panic,TRE,
+23,Closed,cbindgen 0.8.6 stopped producing opaque structs,https://github.com/mozilla/cbindgen/issues/337,https://github.com/mozilla/cbindgen/pull/355,Struct,Compilation Error,Version Compatibility Issue;Missing Type Definition,CPI;INC,Reorder Code Block
+24,Closed,Single-quote chars are wrapped incorrectly,https://github.com/mozilla/cbindgen/issues/320,https://github.com/mozilla/cbindgen/pull/321,Primitive Datatype,Compilation Error,Incorrect Constant Value,UFC,Add match block
+25,Closed,Rust-2018: Check for submodules in a folder with the current module's name,https://github.com/mozilla/cbindgen/issues/254,https://github.com/mozilla/cbindgen/commit/60d60aaf0d8bd290b7fc3d5ceb6284f2157e7cbf,Module Path,Crash,Crate/Module Parsing Failure,IMRE,Mutate method argument;Wrapping in if
+26,Closed,Option<*const T> is incorrectly converted to const T*,https://github.com/mozilla/cbindgen/issues/223,https://github.com/mozilla/cbindgen/pull/647,Enum;Pointer,Incorrect output,Incorrect Data Type,UFC,Mutate match arm
+27,Closed,extern crate required with edition 2018,https://github.com/mozilla/cbindgen/issues/221,https://github.com/mozilla/cbindgen/pull/332,Dependent Crate;Tool Configuration Option,Crash,Version Compatibility Issue;Crate/Module Parsing Failure,CPI;IMRE,
+28,Closed,Negative literals seem to be unsupported,https://github.com/mozilla/cbindgen/issues/205,https://github.com/mozilla/cbindgen/pull/323,Constant,Incorrect output,Missing Constant Definition,INC,Add match arm
+29,Closed,Preserve indentation on comments,https://github.com/mozilla/cbindgen/issues/184,,Comment,Incorrect output,Incorrect Comment,UFC,
+30,Closed,Missing #if defined(…) … #endif guards in header of items from behind #[cfg(…)],https://github.com/mozilla/cbindgen/issues/175,https://github.com/mozilla/cbindgen/issues/175,Attribute,Incorrect output,Missing Macro Guards,INC,
+31,Closed,Using cbindgen and parse-expand inside of buildscript creates infinite rustc process tree,https://github.com/mozilla/cbindgen/issues/153,https://github.com/mozilla/cbindgen/pull/371,Dependent Crate;Tool Configuration Option,Hang,Infinite Loop/Recursion,TBE,Add if branch;Guard clause
+32,Closed,&str is erroneously transformed into `const char *`,https://github.com/mozilla/cbindgen/issues/82,,Reference,Incorrect output,Unsafe FFI,USC,
+33,Closed,Functions with libc types are skipped,https://github.com/mozilla/cbindgen/issues/51,,Function;Primitive Datatype,Incorrect output,Missing Function Definition,INC,
+34,Closed,"Skipped functions: not both `no_mangle` and `extern ""C""`",https://github.com/mozilla/cbindgen/issues/49,https://github.com/mozilla/cbindgen/commit/e0ec983930a318ef1a4016164799e24a248ef93b,Attribute,Incorrect output,Missing Function Definition,INC,Mutate Condition in if
+35,Closed,Definitions in inline mod's aren't found in single source mode,https://github.com/mozilla/cbindgen/issues/45,,Module Path;Struct,Incorrect output,Missing Function Definition;Missing Type Definition,INC,
+36,Closed,Fix vertical function argument formatting,https://github.com/mozilla/cbindgen/issues/14,https://github.com/mozilla/cbindgen/commit/060a79f014388f39d2af69d020bbb9230408ceb2,Function;Pointer,Incorrect output,,,Mutate method chain
+37,Open,[bug] cbindgen treats structs with array types in which there is `as` opaque,https://github.com/mozilla/cbindgen/issues/1031,,Array;Struct,Incorrect output,,,
+38,Open,Incorrect equality operator generated with `derive_eq=true`,https://github.com/mozilla/cbindgen/issues/985,,Tool Configuration Option;Struct,Incorrect output,Wrong Derived Traits;Misbehaving Configuration Option,DTE;TBE,
+39,Open,WARN: Skip unsupported call expression,https://github.com/mozilla/cbindgen/issues/948,,Constant;Enum,Incorrect output,Missing Constant Definition,INC,
+40,Open,"derive-{eq,neq} doesn't account for #[cfg()]d fields.",https://github.com/mozilla/cbindgen/issues/937,,Attribute;Struct,Incorrect output,Missing Macro Guards;Wrong Derived Traits,INC;DTE,
+41,Open,Types not exported when using build script but CLI works,https://github.com/mozilla/cbindgen/issues/931,,Tool Configuration Option;Dependent Crate,Compilation Error,Missing Type Definition,INC,
+42,Open,Const generics: Constants using const generic structs don't quite work.,https://github.com/mozilla/cbindgen/issues/767,,Struct;Constant,Compilation Error,Missing Generic Argument,INC,
+43,Open,#[repr(transparent)] struct with a NonZero field,https://github.com/mozilla/cbindgen/issues/690,,Struct;Enum;Attribute,Incorrect output,"Incorrect Function Signature
+",UFC,
+44,Open,Empty Tuple-Style Enum Variants are mapped differently between C++ and C,https://github.com/mozilla/cbindgen/issues/684,,Enum,Compilation Error,,,
+45,Open,Associated constants processed incorrectly,https://github.com/mozilla/cbindgen/issues/683,,Tool Configuration Option;Array;Enum,Compilation Error,Incorrect Declaration Order;Missing Constant Definition,UFC;INC,
+46,Open,Generic types parametrized by the unit type fail to be generated,https://github.com/mozilla/cbindgen/issues/659,,Struct,Compilation Error,Missing Type Definition,INC,
+47,Open,Small problem in const support of array initialization,https://github.com/mozilla/cbindgen/issues/593,,Array;Struct,Incorrect output,Missing Type Definition;Missing Constant Definition,INC,
+48,Open,Dependencies between constants aren't tracked correctly.,https://github.com/mozilla/cbindgen/issues/592,,Constant,Compilation Error,Incorrect Declaration Order;Missing Constant Definition,UFC;INC,
+49,Open,Cannot publish a crate if its build.rs generates a header file,https://github.com/mozilla/cbindgen/issues/560,,,Compilation Error,,,
+50,Open,Tuple Variants get unparsable body structs with rename_rule = None,https://github.com/mozilla/cbindgen/issues/524,,Constant;Shift,Incorrect output,Incorrect Constant Value,UFC,
+51,Open,Generating constant expressions can result in incorrect values because of mismatched integer types.,https://github.com/mozilla/cbindgen/issues/464,,Constant;Attribute,Incorrect output,Platform Compatibility Issue,CPI,
+52,Open,Panic parsing `serde_derive` with `parse_deps = true`,https://github.com/mozilla/cbindgen/issues/450,,Tool Configuration Option;Dependent Crate,Crash,Crate/Module Parsing Failure,IMRE,
+53,Open,C header doesn't include types for uintptr_t,https://github.com/mozilla/cbindgen/issues/394,,Primitive Datatype,Compilation Error,Missing Import Statement,IMRE,
+54,Open,Rust Option to C ,https://github.com/mozilla/cbindgen/issues/388,,Enum,Incorrect output,,,
+55,Open,Different behavior depending on language selected,https://github.com/mozilla/cbindgen/issues/386,,Tool Configuration Option,Crash,Panic,TRE,
+56,Open,Eq does not get derived for structs with float arrays,https://github.com/mozilla/cbindgen/issues/359,,Tool Configuration Option;Struct,Compilation Error,Missing Derived Traits;Misbehaving Configuration Option,DTE;TBE,
+57,Open,Using an `Option<>` with a function/nonnull type alias generates incorrect bindings,https://github.com/mozilla/cbindgen/issues/326,,Enum;Type Alias,Incorrect output,Missing Alias Definition,INC,
+58,Open,with_header not working if use with_no_includes together,https://github.com/mozilla/cbindgen/issues/249,,Tool Configuration Option,Incorrect output,Misbehaving Configuration Option,TBE,
+59,Open,Generate forward declarations for structs with cyclical pointer references,https://github.com/mozilla/cbindgen/issues/43,,Struct;Pointer,Incorrect output,Incorrect Declaration Order;Missing Type Definition,UFC;INC,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
