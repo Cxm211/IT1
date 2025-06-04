@@ -21,3 +21,15 @@ We systematically analyze **320 real-world bugs** from three widely-used Rust in
 ## 📁 Repository Structure
 - [`taxonomy`](./taxonomy/) – Detailed taxonomy of symptoms, causes, triggers, and fix patterns.
 
+- [`labelling_bugs`](./labelling_bugs/) – Final labels for all 320 issues across tools.  
+  Each entry includes:
+  - **ID**: A unique identifier defined in our dataset.
+  - **Status**: Whether the issue is `open` or `closed` at the point of collection (Feb 2025).
+  - **Title**: Title of the GitHub issue.
+  - **Issue Link**: Direct URL to the original GitHub issue report.
+  - **PR or Commit Link**: URL to the associated PR or commit, if available.
+  - **Trigger**: Labels of trigger.
+  - **Symptom**: Labels of symptom.
+  - **Cause (Sub-category)**: Labels of cause with fine-grained cause categories (e.g., `Incorrect Mutability`, `Missing Wrapper`).
+  - **Cause (High-level)**: Labels of cause with the high-level cause categories (`UFC`, `INC`, `TBE`, `TRE`, etc.).
+  - **Fix Pattern**: Labels of fix pattern.
