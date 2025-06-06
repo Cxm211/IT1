@@ -1,0 +1,1 @@
+bindgen input.h --opaque-type "std::.*" -o generated_bindings.rs --allowlist-type "example_type" --rust-target nightly -- -x c++ -std=c++17

@@ -1,0 +1,14 @@
+test bindgen_test_layout_V56AMDY ... FAILED
+
+failures:
+
+---- bindgen_test_layout_V56AMDY stdout ----
+thread 'bindgen_test_layout_V56AMDY' panicked at 'assertion failed: `(left == right)`
+  left: `10`,
+ right: `8`: Size of: V56AMDY', tests/struct_with_complex_bitfields.rs:109:5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+failures:
+    bindgen_test_layout_V56AMDY
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out

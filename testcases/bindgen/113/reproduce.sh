@@ -1,0 +1,1 @@
+bindgen --enable-cxx-namespaces --no-layout-tests input.h  -- -x c++ -std=c++14 

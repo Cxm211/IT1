@@ -1,0 +1,5 @@
+error[E0412]: cannot find type `temp` in this scope
+  --> ./open/183/generated_bindings.rs:10:40
+   |
+10 |     pub static mut first: *mut MyClass<temp>;
+   |                                        ^^^^ not found in this scope

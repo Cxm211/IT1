@@ -1,0 +1,1 @@
+bindgen --no-layout-tests input.h -o generated_bindings.rs -- --target=arm-linux-androideabi

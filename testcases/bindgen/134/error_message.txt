@@ -1,0 +1,9 @@
+error[E0277]: the trait bound `[u8; 48]: std::fmt::Debug` is not satisfied
+     --> src/dpdk.rs:29074:5
+      |
+29074 |     pub bindgen_union_field: [u8; 48usize],
+      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `std::fmt::Debug` is not implemented for `[u8; 48]`
+      |
+      = note: `[u8; 48]` cannot be formatted using `:?`; if it is defined in your crate, add `#[derive(Debug)]` or manually implement it
+      = note: required because of the requirements on the impl of `std::fmt::Debug` for `&[u8; 48]`
+      = note: required for the cast to the object type `std::fmt::Debug`

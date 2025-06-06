@@ -1,0 +1,1 @@
+bindgen input.h --allowlist-type '(Mutable)?StringPiece'     --generate=types     --opaque-type '(Mutable)?StringPiece'     --no-layout-tests -o generated_bindings.rs -- -x c++ -std=gnu++14

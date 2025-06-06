@@ -1,0 +1,29 @@
+thread 'main' panicked at 'error parsing dependency's target metadata: Error("unexpected token")', src/libcore/result.rs:999:5
+stack backtrace:
+   0: std::sys::unix::backtrace::tracing::imp::unwind_backtrace
+   1: std::sys_common::backtrace::_print
+   2: std::panicking::default_hook::{{closure}}
+   3: std::panicking::default_hook
+   4: std::panicking::rust_panic_with_hook
+   5: std::panicking::continue_panic_fmt
+   6: rust_begin_unwind
+   7: core::panicking::panic_fmt
+   8: core::result::unwrap_failed
+   9: cbindgen::bindgen::ir::cfg::Cfg::load_metadata
+  10: <core::iter::adapters::Map<I,F> as core::iter::traits::iterator::Iterator>::fold
+  11: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T,I>>::from_iter
+  12: cbindgen::bindgen::cargo::cargo::Cargo::dependencies
+  13: cbindgen::bindgen::parser::Parser::parse_crate
+  14: cbindgen::bindgen::parser::Parser::parse_crate
+  15: cbindgen::bindgen::parser::Parser::parse_crate
+  16: cbindgen::bindgen::parser::Parser::parse_crate
+  17: cbindgen::bindgen::parser::Parser::parse_crate
+  18: cbindgen::bindgen::parser::Parser::parse_crate
+  19: cbindgen::bindgen::parser::parse_lib
+  20: cbindgen::bindgen::builder::Builder::generate
+  21: cbindgen::main
+  22: std::rt::lang_start::{{closure}}
+  23: std::panicking::try::do_call
+  24: __rust_maybe_catch_panic
+  25: std::rt::lang_start_internal
+  26: main

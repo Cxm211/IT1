@@ -1,0 +1,4 @@
+test.hpp:1:1: error: unknown type name 'constexpr'
+test.hpp:1:1: error: unknown type name 'constexpr', err: true
+thread 'main' panicked at 'Unable to generate bindings: ()', /Users/ccouzens/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.56.0/src/main.rs:54:36
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --with-derive-hash --with-derive-partialeq --with-derive-eq --with-derive-partialord --with-derive-ord -- -x c++ -std=c++14

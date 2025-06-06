@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --flexarray-dst --rust-target nightly -- -x c++ -std=c++14

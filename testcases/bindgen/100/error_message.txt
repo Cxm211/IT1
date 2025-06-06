@@ -1,0 +1,68 @@
+pi@pirepeater:~/source/bindgen-test$ RUST_BACKTRACE=1 RUST_LOG=bindgen cargo build
+   Compiling bindgen-test v0.1.0 (file:///home/pi/source/bindgen-test)
+error: failed to run custom build command for `bindgen-test v0.1.0 (file:///home/pi/source/bindgen-test)`
+process didn't exit successfully: `/home/pi/source/bindgen-test/target/debug/build/bindgen-test-d1b6d9223679bb31/build-script-build` (exit code: 101)
+--- stderr
+thread 'main' panicked at 'attempt to shift left with overflow', /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.25.3/src/ir/comp.rs:297
+stack backtrace:
+   0: std::sys::imp::backtrace::tracing::imp::unwind_backtrace
+             at /checkout/src/libstd/sys/unix/backtrace/tracing/gcc_s.rs:49
+   1: std::sys_common::backtrace::_print
+             at /checkout/src/libstd/sys_common/backtrace.rs:71
+   2: std::panicking::default_hook::{{closure}}
+             at /checkout/src/libstd/sys_common/backtrace.rs:60
+             at /checkout/src/libstd/panicking.rs:355
+   3: std::panicking::default_hook
+             at /checkout/src/libstd/panicking.rs:371
+   4: std::panicking::rust_panic_with_hook
+             at /checkout/src/libstd/panicking.rs:549
+   5: std::panicking::begin_panic
+             at /checkout/src/libstd/panicking.rs:511
+   6: std::panicking::begin_panic_fmt
+             at /checkout/src/libstd/panicking.rs:495
+   7: rust_begin_unwind
+             at /checkout/src/libstd/panicking.rs:471
+   8: core::panicking::panic_fmt
+             at /checkout/src/libcore/panicking.rs:69
+   9: core::panicking::panic
+             at /checkout/src/libcore/panicking.rs:49
+  10: bindgen::ir::comp::Bitfield::mask
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.25.3/src/ir/comp.rs:297
+  11: <bindgen::ir::comp::Bitfield as bindgen::codegen::FieldCodegen<'a>>::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:3017
+  12: <bindgen::ir::comp::BitfieldUnit as bindgen::codegen::FieldCodegen<'a>>::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:2933
+  13: <bindgen::ir::comp::Field as bindgen::codegen::FieldCodegen<'a>>::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:2095
+  14: <bindgen::ir::comp::CompInfo as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:3525
+  15: <bindgen::ir::ty::Type as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:1675
+  16: <bindgen::ir::item::Item as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:1465
+  17: <bindgen::ir::module::Module as bindgen::codegen::CodeGenerator>::codegen::{{closure}}
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:1486
+  18: <bindgen::ir::module::Module as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:1510
+  19: <bindgen::ir::item::Item as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:1451
+  20: bindgen::codegen::codegen::{{closure}}
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:5925
+  21: bindgen::ir::context::BindgenContext::gen
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.25.3/src/ir/context.rs:662
+  22: bindgen::codegen::codegen
+             at ./target/debug/build/bindgen-bb02d811d9c942d5/out/codegen.rs:5903
+  23: bindgen::Bindings::generate
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.25.3/src/lib.rs:1075
+  24: bindgen::Builder::generate
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.25.3/src/lib.rs:778
+  25: build_script_build::main
+             at ./build.rs:33
+  26: __rust_maybe_catch_panic
+             at /checkout/src/libpanic_unwind/lib.rs:98
+  27: std::rt::lang_start
+             at /checkout/src/libstd/panicking.rs:433
+             at /checkout/src/libstd/panic.rs:361
+             at /checkout/src/libstd/rt.rs:57
+  28: main
+  29: __libc_start_main

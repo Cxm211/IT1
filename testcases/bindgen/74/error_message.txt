@@ -1,0 +1,18 @@
+error: expected item after attributes
+  --> ./closed/74/reported_bindings.rs:9:2
+   |
+8  | extern "C" {
+   |            - while parsing this item list starting here
+9  |  # [ link_name = "\u{1}_sqlite3_exec" ]
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+10 |     ;
+11 | }
+   | - the item list ends here
+   |
+help: consider removing this semicolon
+   |
+10 -     ;
+   |
+
+error: aborting due to 1 previous error
+

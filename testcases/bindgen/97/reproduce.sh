@@ -1,0 +1,1 @@
+bindgen input.h --no-prepend-enum-name -o generated_bindings.rs

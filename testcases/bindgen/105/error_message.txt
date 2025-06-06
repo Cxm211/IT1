@@ -1,0 +1,48 @@
+---- bindgen_test_layout_dm_deps stdout ----
+	thread 'bindgen_test_layout_dm_deps' panicked at 'assertion failed: `(left == right)` (left: `4`, right: `8`): Alignment of dm_deps', /mnt/sdb/repos/lvm-sys/target/debug/build/lvm-sys-7e5868edf14c1ccb/out/bindings.rs:3319
+stack backtrace:
+   0: std::sys::imp::backtrace::tracing::imp::unwind_backtrace
+             at /checkout/src/libstd/sys/unix/backtrace/tracing/gcc_s.rs:49
+   1: std::sys_common::backtrace::_print
+             at /checkout/src/libstd/sys_common/backtrace.rs:71
+   2: std::panicking::default_hook::{{closure}}
+             at /checkout/src/libstd/sys_common/backtrace.rs:60
+             at /checkout/src/libstd/panicking.rs:355
+   3: std::panicking::default_hook
+             at /checkout/src/libstd/panicking.rs:365
+   4: std::panicking::rust_panic_with_hook
+             at /checkout/src/libstd/panicking.rs:549
+   5: std::panicking::begin_panic
+             at /checkout/src/libstd/panicking.rs:511
+   6: std::panicking::begin_panic_fmt
+             at /checkout/src/libstd/panicking.rs:495
+   7: lvm_sys::bindgen_test_layout_dm_deps
+             at ./target/debug/build/lvm-sys-7e5868edf14c1ccb/out/bindings.rs:3319
+   8: <F as test::FnBox<T>>::call_box
+             at /checkout/src/libtest/lib.rs:1368
+             at /checkout/src/libtest/lib.rs:140
+   9: std::panicking::try::do_call
+             at /checkout/src/libtest/lib.rs:1314
+             at /checkout/src/libstd/panic.rs:296
+             at /checkout/src/libstd/panicking.rs:454
+  10: __rust_maybe_catch_panic
+             at /checkout/src/libpanic_unwind/lib.rs:98
+  11: std::panicking::try::do_call
+             at /checkout/src/libstd/panicking.rs:433
+             at /checkout/src/libstd/panic.rs:361
+             at /checkout/src/libtest/lib.rs:1313
+             at /checkout/src/libstd/panic.rs:296
+             at /checkout/src/libstd/panicking.rs:454
+  12: __rust_maybe_catch_panic
+             at /checkout/src/libpanic_unwind/lib.rs:98
+  13: <F as alloc::boxed::FnBox<A>>::call_box
+             at /checkout/src/libstd/panicking.rs:433
+             at /checkout/src/libstd/panic.rs:361
+             at /checkout/src/libstd/thread/mod.rs:360
+             at /checkout/src/liballoc/boxed.rs:640
+  14: std::sys::imp::thread::Thread::new::thread_start
+             at /checkout/src/liballoc/boxed.rs:650
+             at /checkout/src/libstd/sys_common/thread.rs:21
+             at /checkout/src/libstd/sys/unix/thread.rs:84
+  15: start_thread
+  16: clone

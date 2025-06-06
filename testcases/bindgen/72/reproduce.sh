@@ -1,0 +1,1 @@
+bindgen input.h  --no-copy MyType -o generated_bindings.rs -- -x c++ -std=c++14

@@ -1,0 +1,1 @@
+#define SomethingBits_FOO (uint64_t)(1 << 40)

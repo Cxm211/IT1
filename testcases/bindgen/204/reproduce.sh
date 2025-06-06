@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs  --blocklist-type "TransformOp" --blocklist-type "Transform" -- -x c++ -std=c++14

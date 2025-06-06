@@ -1,0 +1,1 @@
+bindgen input.h --output generated_bindings.rs -- -x c++ -std=c++20 -target i686-pc-windows-msvc

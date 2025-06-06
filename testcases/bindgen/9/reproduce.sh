@@ -1,0 +1,1 @@
+bindgen input.h --dynamic-loading TestLib -o generated_bindings.rs

@@ -1,0 +1,1 @@
+bindgen input.h --enable-cxx-namespaces --allowlist-type 'JS::Value' -o generated_bindings.rs -- -x c++ -std=c++14 

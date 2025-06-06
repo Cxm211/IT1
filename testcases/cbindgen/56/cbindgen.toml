@@ -1,0 +1,2 @@
+[struct]
+derive_eq = true

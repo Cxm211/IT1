@@ -1,0 +1,10 @@
+[package]
+name = "cxx_issue"
+version = "0.0.0"
+
+
+[dependencies]
+cxx = "1.0.139"
+
+[build-dependencies]
+cxx-build = "1.0.139"

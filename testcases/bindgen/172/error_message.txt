@@ -1,0 +1,57 @@
+error[E0428]: the name `b` is defined multiple times
+  --> ./open/172/generated_bindings.rs:26:1
+   |
+25 | pub type b = b;
+   | --------------- previous definition of the type `b` here
+26 | pub type b = ::std::os::raw::c_int;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `b` redefined here
+   |
+   = note: `b` must be defined only once in the type namespace of this module
+
+warning: type `a_b` should have an upper camel case name
+  --> ./open/172/generated_bindings.rs:18:10
+   |
+18 | pub type a_b = ::std::os::raw::c_int;
+   |          ^^^ help: convert the identifier to upper camel case: `AB`
+   |
+   = note: `#[warn(non_camel_case_types)]` on by default
+
+warning: type `c_b` should have an upper camel case name
+  --> ./open/172/generated_bindings.rs:24:10
+   |
+24 | pub type c_b = __BindgenOpaqueArray<u8, 0usize>;
+   |          ^^^ help: convert the identifier to upper camel case: `CB`
+
+warning: type `b` should have an upper camel case name
+  --> ./open/172/generated_bindings.rs:25:10
+   |
+25 | pub type b = b;
+   |          ^ help: convert the identifier to upper camel case: `B`
+
+warning: type `b` should have an upper camel case name
+  --> ./open/172/generated_bindings.rs:26:10
+   |
+26 | pub type b = ::std::os::raw::c_int;
+   |          ^ help: convert the identifier to upper camel case: `B`
+
+error[E0391]: cycle detected when expanding type alias `b`
+  --> ./open/172/generated_bindings.rs:25:14
+   |
+25 | pub type b = b;
+   |              ^
+   |
+   = note: ...which immediately requires expanding type alias `b` again
+   = note: type aliases cannot be recursive
+   = help: consider using a struct, enum, or union instead to break the cycle
+   = help: see <https://doc.rust-lang.org/reference/types.html#recursive-types> for more information
+note: cycle used when checking that `b` is well-formed
+  --> ./open/172/generated_bindings.rs:25:1
+   |
+25 | pub type b = b;
+   | ^^^^^^^^^^
+   = note: see https://rustc-dev-guide.rust-lang.org/overview.html#queries and https://rustc-dev-guide.rust-lang.org/query.html for more information
+
+error: aborting due to 2 previous errors; 4 warnings emitted
+
+Some errors have detailed explanations: E0391, E0428.
+For more information about an error, try `rustc --explain E0391`.

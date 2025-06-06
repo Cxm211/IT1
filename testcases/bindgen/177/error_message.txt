@@ -1,0 +1,36 @@
+error[E0428]: the name `NSImage_` is defined multiple times
+  --> ./open/177/generated_bindings.rs:27:1
+   |
+25 | pub trait NSImage_: Sized + std::ops::Deref {}
+   | ------------------------------------------- previous definition of the trait `NSImage_` here
+26 | impl NSImage_ for NSImage {}
+27 | pub trait NSImage_: Sized + std::ops::Deref {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `NSImage_` redefined here
+   |
+   = note: `NSImage_` must be defined only once in the type namespace of this module
+
+error: cannot find macro `msg_send` in this scope
+  --> ./open/177/generated_bindings.rs:19:23
+   |
+19 |         Self(unsafe { msg_send!(class!(NSImage), alloc) })
+   |                       ^^^^^^^^
+
+error: cannot find macro `msg_send` in this scope
+  --> ./open/177/generated_bindings.rs:32:9
+   |
+32 |         msg_send!(*self, foo)
+   |         ^^^^^^^^
+
+error[E0119]: conflicting implementations of trait `NSImage_` for type `NSImage`
+  --> ./open/177/generated_bindings.rs:26:1
+   |
+24 | impl NSImage_ for NSImage {}
+   | ------------------------- first implementation here
+25 | pub trait NSImage_: Sized + std::ops::Deref {}
+26 | impl NSImage_ for NSImage {}
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^ conflicting implementation for `NSImage`
+
+error: aborting due to 5 previous errors
+
+Some errors have detailed explanations: E0119, E0428, E0463.
+For more information about an error, try `rustc --explain E0119`.

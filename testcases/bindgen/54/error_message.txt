@@ -1,0 +1,11 @@
+error[E0412]: cannot find type `__BindgenUnionField` in module `root`
+  --> src/../target/gen/bindings.rs:27:23
+   |
+27 |                 root::__BindgenUnionField<root::ORUtils::Vector2___bindgen_ty_1__bindgen_ty_1<T>>,
+   |                       ^^^^^^^^^^^^^^^^^^^ not found in `root`
+
+error[E0412]: cannot find type `__BindgenUnionField` in module `root`
+  --> src/../target/gen/bindings.rs:29:23
+   |
+29 |                 root::__BindgenUnionField<root::ORUtils::Vector2___bindgen_ty_1__bindgen_ty_2<T>>,
+   |                       ^^^^^^^^^^^^^^^^^^^ not found in `root`

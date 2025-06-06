@@ -1,0 +1,9 @@
+error[E0391]: cycle detected when processing `u64`
+   --> /home/jon/dev/tmp/cargo-target/debug/build/bindgen-typedef-primitive-177200f3c53a8948/out/bindings.rs:193:16
+    |
+193 | pub type u64 = u64;
+    |                ^^^
+    |
+    = note: ...which again requires processing `u64`, completing the cycle
+
+error: aborting due to previous error

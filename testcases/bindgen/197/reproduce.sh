@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs  --  -target x86_64-pc-windows-msvc

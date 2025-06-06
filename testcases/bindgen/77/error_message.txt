@@ -1,0 +1,23 @@
+error[E0277]: the trait bound `__IncompleteArrayField<i8>: std::hash::Hash` is not satisfied
+  --> test.rs:40:5
+   |
+40 |     pub data: __IncompleteArrayField<::std::os::raw::c_char>,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `std::hash::Hash` is not implemented for `__IncompleteArrayField<i8>`
+   |
+   = note: required by `std::hash::Hash::hash`
+
+error[E0369]: binary operation `==` cannot be applied to type `__IncompleteArrayField<i8>`
+  --> test.rs:40:5
+   |
+40 |     pub data: __IncompleteArrayField<::std::os::raw::c_char>,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: an implementation of `std::cmp::PartialEq` might be missing for `__IncompleteArrayField<i8>`
+
+error[E0369]: binary operation `!=` cannot be applied to type `__IncompleteArrayField<i8>`
+  --> test.rs:40:5
+   |
+40 |     pub data: __IncompleteArrayField<::std::os::raw::c_char>,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: an implementation of `std::cmp::PartialEq` might be missing for `__IncompleteArrayField<i8>`

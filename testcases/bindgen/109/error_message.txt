@@ -1,0 +1,5 @@
+error[E0412]: cannot find type `T` in this scope
+  --> stylo_structs.rs:30:60
+   |
+30 |         pub mPtr: root::RefPtr<root::nsMainThreadPtrHolder<T>>,
+   |                                                            ^ not found in this scope

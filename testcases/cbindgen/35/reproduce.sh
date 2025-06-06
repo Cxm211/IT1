@@ -1,0 +1,1 @@
+cbindgen demo/src/lib.rs -o generated_binding.h

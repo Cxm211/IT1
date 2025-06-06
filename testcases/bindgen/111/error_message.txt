@@ -1,0 +1,1 @@
+ERROR:bindgen::codegen::struct_layout: Calculated wrong layout for Foo, too more 4 bytes

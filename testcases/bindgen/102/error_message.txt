@@ -1,0 +1,39 @@
+$ ~/scratch/bitfield 
+
+running 1 test
+test bindgen_test_layout_TaggedPtr ... FAILED
+
+failures:
+
+---- bindgen_test_layout_TaggedPtr stdout ----
+	thread 'bindgen_test_layout_TaggedPtr' panicked at 'assertion failed: `(left == right)` (left: `16`, right: `8`): Size of: TaggedPtr', /home/fitzgen/scratch/bitfield.rs:17
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+stack backtrace:
+   0: std::sys::imp::backtrace::tracing::imp::unwind_backtrace
+             at /checkout/src/libstd/sys/unix/backtrace/tracing/gcc_s.rs:49
+   1: std::sys_common::backtrace::_print
+             at /checkout/src/libstd/sys_common/backtrace.rs:71
+   2: std::panicking::default_hook::{{closure}}
+             at /checkout/src/libstd/sys_common/backtrace.rs:60
+             at /checkout/src/libstd/panicking.rs:355
+   3: std::panicking::default_hook
+             at /checkout/src/libstd/panicking.rs:365
+   4: std::panicking::rust_panic_with_hook
+             at /checkout/src/libstd/panicking.rs:549
+   5: std::panicking::begin_panic
+             at /checkout/src/libstd/panicking.rs:511
+   6: std::panicking::begin_panic_fmt
+             at /checkout/src/libstd/panicking.rs:495
+   7: bitfield::bindgen_test_layout_TaggedPtr
+   8: <F as test::FnBox<T>>::call_box
+             at /checkout/src/libtest/lib.rs:1440
+             at /checkout/src/libcore/ops.rs:2662
+             at /checkout/src/libtest/lib.rs:140
+   9: __rust_maybe_catch_panic
+             at /checkout/src/libpanic_unwind/lib.rs:98
+
+
+failures:
+    bindgen_test_layout_TaggedPtr
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured

@@ -1,0 +1,6 @@
+error[E0091]: type parameter `T` is never used
+ --> ./closed/126/reported_bindings.rs:3:21
+  |
+3 | pub type always_int<T> = ::std::os::raw::c_int;
+  |                     ^ unused type parameter
+  |

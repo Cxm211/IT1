@@ -1,0 +1,5 @@
+
+thread 'header::bindgen_test_layout_max_align_t'
+ panicked at 'assertion failed: `(left == right)`
+  left: `8`,
+ right: `16`: Size of: max_align_t', src/header.rs:10:5

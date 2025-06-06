@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --rust-target 1.33.0 -- -x c++ -std=c++17

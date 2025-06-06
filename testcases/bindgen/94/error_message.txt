@@ -1,0 +1,5 @@
+error[E0412]: cannot find type `std_basic_string__Alloc_hider` in this scope
+  --> /home/christian/repos/rust/bindgen_mvnp/target/debug/build/alice-sys-350880093f241c3d/out/bindings.rs:30:22
+   |
+30 |     pub _M_dataplus: std_basic_string__Alloc_hider,
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ did you mean `std___cxx11_basic_string__Alloc_hider`?

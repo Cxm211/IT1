@@ -1,0 +1,5 @@
+error[E0412]: cannot find type `string` in module `root::std`
+  --> src/lib.rs:35:43
+   |
+35 |             pub m_stack_trace: root::std::string,
+   |                                           ^^^^^^ not found in `root::std`

@@ -1,0 +1,1 @@
+bindgen input.h --opaque-type "std::.*" --allowlist-var "MySpace::.*" --allowlist-type "MySpace::.*" --allowlist-function "MySpace::.*" -o generated_bindings.rs  -- -x c++ -std=c++14 

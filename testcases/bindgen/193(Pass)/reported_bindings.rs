@@ -1,0 +1,1 @@
+pub type example_type = [u128; 3usize];

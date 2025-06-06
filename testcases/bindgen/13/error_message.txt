@@ -1,0 +1,22 @@
+error: expected identifier, found keyword `dyn`
+   --> src/ffi/pfvar.rs:581:9
+    |
+581 |     pub dyn: *mut ::std::os::raw::c_void,
+    |         ^^^ expected identifier, found keyword
+    |
+help: you can escape reserved keywords to use them as identifiers
+    |
+581 |     pub r#dyn: *mut ::std::os::raw::c_void,
+    |         ^^^^^
+
+error: unions cannot have zero fields
+   --> src/ffi/pfvar.rs:580:1
+    |
+580 | / pub union pf_addr_wrap__bindgen_ty_2 {
+581 | |     pub dyn: *mut ::std::os::raw::c_void,
+582 | |     pub tbl: *mut ::std::os::raw::c_void,
+583 | |     pub dyncnt: ::std::os::raw::c_int,
+584 | |     pub tblcnt: ::std::os::raw::c_int,
+585 | |     _bindgen_union_align: u64,
+586 | | }
+    | |_^

@@ -1,0 +1,1 @@
+bindgen input.h --rust-target 1.33.0 --enable-function-attribute-detection -o generated_bindings.rs    

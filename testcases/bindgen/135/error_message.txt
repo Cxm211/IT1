@@ -1,0 +1,13 @@
+error[E0412]: cannot find type `JSWhyMagic` in module `root::JS`
+  --> ./closed/135/reported_bindings.rs:24:44
+   |
+24 | ...                   arg1: root::JS::JSWhyMagic);
+   |                                       ^^^^^^^^^^ not found in `root::JS`
+
+error[E0412]: cannot find type `JSWhyMagic` in module `root::JS`
+  --> ./closed/135/reported_bindings.rs:31:56
+   |
+31 |             pub unsafe fn a(&mut self, arg1: root::JS::JSWhyMagic) {
+   |                                                        ^^^^^^^^^^ not found in `root::JS`
+
+error: aborting due to 3 previous errors

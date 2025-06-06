@@ -1,0 +1,1 @@
+bindgen input.h -- -x c++ -std=c++14 

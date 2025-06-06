@@ -1,0 +1,10 @@
+clang-4.0: warning: treating 'c-header' input as 'c++-header' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+error[E0045]: variadic function must have C or cdecl calling convention
+ --> /tmp/bindings-CLx7tG.rs:5:2
+  |
+5 |  pub fn a ( arg1 : :: std :: os :: raw :: c_char , ... ) -> :: std :: os :: raw :: c_char ;
+  |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variadics require C or cdecl calling convention
+
+error: aborting due to previous error
+
+Interesting: bindgen emitted Rust code that won't compile!

@@ -1,0 +1,5 @@
+# cbindgen.toml
+
+[defines]
+"foo" = "FOO"
+"bar" = "BAR"

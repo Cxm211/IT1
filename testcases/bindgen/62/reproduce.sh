@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --rustified-enum "A" --with-derive-ord -- -x c++ -std=c++14

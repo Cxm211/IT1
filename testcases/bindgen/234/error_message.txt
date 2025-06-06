@@ -1,0 +1,8 @@
+error[E0124]: field `type_` is already declared
+ --> ./open/234/generated_bindings.rs:7:5
+  |
+6 |     pub type_: ::std::os::raw::c_int,
+  |     -------------------------------- `type_` first declared here
+7 |     pub type_: ::std::os::raw::c_int,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ field already declared
+

@@ -1,0 +1,16 @@
+error[E0080]: evaluation of constant value failed
+  --> ./open/233/generated_bindings.rs:28:5
+   |
+28 |     ["Size of CallArgs"][::std::mem::size_of::<CallArgs>() - 16usiz...
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ index out of bounds: the length is 1 but the index is 8
+
+error[E0080]: evaluation of constant value failed
+  --> ./open/233/generated_bindings.rs:33:5
+   |
+33 | /     ["Size of template specialization: CallArgsBase_open0_Base_clo...
+34 | |         [::std::mem::size_of::<CallArgsBase<Base>>() - 16usiz...
+   | |_______________________________________________________________^ index out of bounds: the length is 1 but the index is 8
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0080`.

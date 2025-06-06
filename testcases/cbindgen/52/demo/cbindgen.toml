@@ -1,0 +1,10 @@
+language = "C"
+
+[parse]
+parse_deps = true
+
+[defines]
+"feature = full" = "FULL"   
+"feature = derive" = "DERIVE"
+"feature = printing" = "PRINTING"
+

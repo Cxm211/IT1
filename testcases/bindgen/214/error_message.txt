@@ -1,0 +1,5 @@
+error[E0080]: evaluation of constant value failed
+   --> generated_bindings.rs:504:5
+    |
+504 |     ["Size of S"][::std::mem::size_of::<S>() - 8usize];
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ index out of bounds: the length is 1 but the index is 4

@@ -1,0 +1,20 @@
+error[E0428]: the name `pointer` is defined multiple times
+  --> ./open/182/generated_bindings.rs:19:1
+   |
+18 | pub type pointer = pointer;
+   | --------------------------- previous definition of the type `pointer` here
+19 | pub type pointer = type_;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^ `pointer` redefined here
+   |
+   = note: `pointer` must be defined only once in the type namespace of this module
+
+error[E0428]: the name `pointer` is defined multiple times
+  --> ./open/182/generated_bindings.rs:21:1
+   |
+18 | pub type pointer = pointer;
+   | --------------------------- previous definition of the type `pointer` here
+...
+21 | pub type pointer = *mut ::std::os::raw::c_int;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `pointer` redefined here
+   |
+   = note: `pointer` must be defined only once in the type namespace of this module

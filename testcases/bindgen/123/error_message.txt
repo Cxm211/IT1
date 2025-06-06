@@ -1,0 +1,5 @@
+error[E0412]: cannot find type s__bindgen_ty_1_inner in this scope
+--> foo.rs:11:16
+|
+11 | pub field: s__bindgen_ty_1_inner,
+| ^^^^^^^^^^^^^^^^^^^^^ did you mean s__bindgen_ty_1?

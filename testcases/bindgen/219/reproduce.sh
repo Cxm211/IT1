@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --with-derive-default --impl-debug -- -x c++ -std=c++14

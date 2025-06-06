@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --impl-debug

@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --raw-line '#![cfg(not(test))]' -- --target=i686-pc-win32 -x c++ -std=c++14

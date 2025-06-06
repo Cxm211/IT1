@@ -1,0 +1,11 @@
+error[E0277]: the trait bound `[u64; 33]: std::fmt::Debug` is not satisfied
+  --> js.rs:53:9
+   |
+53 |         pub w: [u64; 33usize],
+   |         ^^^^^^^^^^^^^^^^^^^^^ the trait `std::fmt::Debug` is not implemented for `[u64; 33]`
+   |
+   = note: `[u64; 33]` cannot be formatted using `:?`; if it is defined in your crate, add `#[derive(Debug)]` or manually implement it
+   = note: required because of the requirements on the impl of `std::fmt::Debug` for `&[u64; 33]`
+   = note: required for the cast to the object type `std::fmt::Debug`
+
+error: aborting due to previous error

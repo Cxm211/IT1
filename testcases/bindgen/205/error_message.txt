@@ -1,0 +1,25 @@
+error[E0412]: cannot find type `T` in this scope
+  --> ./open/205/generated_bindings.rs:12:22
+   |
+12 |     pub inner: Inner<T>,
+   |                      ^ not found in this scope
+   |
+help: you might be missing a type parameter
+   |
+11 | pub struct Outer<T> {
+   |                 +++
+
+error[E0412]: cannot find type `T` in this scope
+  --> ./open/205/generated_bindings.rs:12:22
+   |
+12 |     pub inner: Inner<T>,
+   |                      ^ not found in this scope
+   |
+help: you might be missing a type parameter
+   |
+11 | pub struct Outer<T> {
+   |                 +++
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0412`.

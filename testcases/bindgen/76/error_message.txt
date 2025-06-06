@@ -1,0 +1,5 @@
+error: unexpected close delimiter: `]`
+    --> src/xen.rs:1965:32
+     |
+1965 | #[derive(Copy, Clone)]; 2usize ] , }#[repr(C)]
+     |

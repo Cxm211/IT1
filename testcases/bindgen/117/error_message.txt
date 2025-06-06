@@ -1,0 +1,19 @@
+running 2 tests
+test root::JS::bindgen_test_layout_AutoIdVector ... FAILED
+test root::__bindgen_test_layout_e_instantiation_16 ... FAILED
+
+failures:
+
+---- root::JS::bindgen_test_layout_AutoIdVector stdout ----
+	thread 'root::JS::bindgen_test_layout_AutoIdVector' panicked at 'assertion failed: `(left == right)` (left: `0`, right: `1`): Size of: AutoIdVector', ./js.rs:22
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
+
+---- root::__bindgen_test_layout_e_instantiation_16 stdout ----
+	thread 'root::__bindgen_test_layout_e_instantiation_16' panicked at 'assertion failed: `(left == right)` (left: `0`, right: `1`): Size of template specialization: root :: JS :: e', ./js.rs:31
+
+
+failures:
+    root::JS::bindgen_test_layout_AutoIdVector
+    root::__bindgen_test_layout_e_instantiation_16
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured

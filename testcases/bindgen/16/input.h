@@ -1,0 +1,1 @@
+void foo(const int array[][5]);

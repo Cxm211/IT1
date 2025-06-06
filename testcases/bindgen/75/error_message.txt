@@ -1,0 +1,59 @@
+ERROR:bindgen::ir::item: Unhandled cursor kind 21: Cursor(at kind: CXXMethod, loc: ./__bindgen.ii:20:47, usr: Some("c:@SP>9#T#T#T#T#T#T#T#T#T@_Map_base>#t0.0#t0.1#t0.2#$@S@_Select1st#t0.3#t0.4#t0.5#t0.6#t0.7#t0.8#Vb1@F@at#&1^A<type-parameter-0-8>:::key_type#"))
+thread 'main' panicked at 'Not an item: ItemId(21)', /home/christian/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.31.1/src/ir/context.rs:1481:20
+stack backtrace:
+   0: std::sys::imp::backtrace::tracing::imp::unwind_backtrace
+             at /checkout/src/libstd/sys/unix/backtrace/tracing/gcc_s.rs:49
+   1: std::sys_common::backtrace::_print
+             at /checkout/src/libstd/sys_common/backtrace.rs:71
+   2: std::panicking::default_hook::{{closure}}
+             at /checkout/src/libstd/sys_common/backtrace.rs:60
+             at /checkout/src/libstd/panicking.rs:380
+   3: std::panicking::default_hook
+             at /checkout/src/libstd/panicking.rs:396
+   4: std::panicking::rust_panic_with_hook
+             at /checkout/src/libstd/panicking.rs:610
+   5: std::panicking::begin_panic
+             at /checkout/src/libstd/panicking.rs:571
+   6: std::panicking::begin_panic_fmt
+             at /checkout/src/libstd/panicking.rs:521
+   7: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+   8: bindgen::ir::item::visit_child
+   9: bindgen::clang::visit_children
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: clang_visitChildren
+  21: clang_sys::clang_visitChildren
+  22: bindgen::clang::Cursor::visit
+  23: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+  24: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref_with_id
+  25: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref
+  26: bindgen::ir::ty::Type::from_clang_ty
+  27: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+  28: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref_with_id
+  29: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref
+  30: bindgen::ir::ty::Type::from_clang_ty
+  31: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+  32: bindgen::ir::context::BindgenContext::gen
+  33: bindgen::codegen::codegen
+  34: bindgen::Builder::generate
+  35: std::panicking::try::do_call
+  36: __rust_maybe_catch_panic
+             at /checkout/src/libpanic_unwind/lib.rs:98
+  37: std::panic::catch_unwind
+  38: bindgen::main
+  39: __rust_maybe_catch_panic
+             at /checkout/src/libpanic_unwind/lib.rs:98
+  40: std::rt::lang_start
+             at /checkout/src/libstd/panicking.rs:458
+             at /checkout/src/libstd/panic.rs:361
+             at /checkout/src/libstd/rt.rs:61
+  41: __libc_start_main
+  42: _start

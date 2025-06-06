@@ -1,0 +1,16 @@
+error[E0587]: type has conflicting packed and align representation hints
+  --> ./open/223/generated_bindings.rs:35:1
+   |
+35 | pub struct header {
+   | ^^^^^^^^^^^^^^^^^
+
+error[E0080]: evaluation of constant value failed
+  --> ./open/223/generated_bindings.rs:45:5
+   |
+45 |     ["Offset of field: header::size"][::std::mem::offset_of!(header, size) - 1usiz...
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ index out of bounds: the length is 1 but the index is 3
+
+error: aborting due to 2 previous errors
+
+Some errors have detailed explanations: E0080, E0587.
+For more information about an error, try `rustc --explain E0080`.

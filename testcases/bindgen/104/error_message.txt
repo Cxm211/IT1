@@ -1,0 +1,16 @@
+       Fresh bindgen v0.23.1                                                                                                                                                                                                                                                                                                        Compiling math_dot_h v0.1.0 (file:///home/def/p/rust/math_dot_h)
+     Running `rustc --crate-name math_dot_h src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=93892b9e7e7b815c -C extra-filename=-93892b9e7e7b815c --out-dir /home/def/p/rust/math_dot_h/target/debug/deps -L dependency=/home/def/p/rust/math_dot_h/target/debug/deps`
+error[E0428]: a value named `A` has already been defined in this module
+ --> /home/def/p/rust/math_dot_h/target/debug/build/math_dot_h-7f0a85db403a8610/out/bindings.rs:4:1
+  |
+3 | pub const A: ::std::os::raw::c_uint = 0;
+  | ---------------------------------------- previous definition of `A` here
+4 | pub const A: _bindgen_ty_1 = _bindgen_ty_1::A;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `A` already defined
+
+error: aborting due to previous error
+
+error: Could not compile `math_dot_h`.
+
+Caused by:
+  process didn't exit successfully: `rustc --crate-name math_dot_h src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=93892b9e7e7b815c -C extra-filename=-93892b9e7e7b815c --out-dir /home/def/p/rust/math_dot_h/target/debug/deps -L dependency=/home/def/p/rust/math_dot_h/target/debug/deps` (exit code: 101)

@@ -1,0 +1,13 @@
+cargo build
+  Compiling simple-bindgen v0.1.0 (simple-bindgen)
+error[E0589]: invalid `repr(align)` attribute: not a power of two
+ --> simple-bindgen/target/debug/build/simple-bindgen-0af4d98c1d10abb2/out/bindings.rs:73:8
+  |
+73 | #[repr(align(0))]
+  |        ^^^^^^^^
+
+error[E0589]: invalid `repr(align)` attribute: not a power of two
+ --> simple-bindgen/target/debug/build/simple-bindgen-0af4d98c1d10abb2/out/bindings.rs:90:8
+  |
+90 | #[repr(align(0))]
+  |        ^^^^^^^^

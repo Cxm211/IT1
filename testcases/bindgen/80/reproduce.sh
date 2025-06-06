@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --impl-debug --use-core --raw-line "extern crate core;" -- -x c++ -std=c++14 

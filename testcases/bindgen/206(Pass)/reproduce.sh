@@ -1,0 +1,1 @@
+TARGET=riscv32imac-unknown-none-elf bindgen input.h -o generated_bindings.rs 

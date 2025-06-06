@@ -1,0 +1,1 @@
+bindgen input.h --with-derive-hash --with-derive-partialeq --with-derive-eq --impl-partialeq --rust-target 1.40 -o generated_bindings.rs -- -x c++ -std=c++14

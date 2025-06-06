@@ -1,0 +1,12 @@
+error[E0412]: cannot find type `file_t` in this scope
+ --> ./open/212/generated_bindings.rs:9:30
+  |
+5 | pub struct file_s {
+  | ----------------- similarly named struct `file_s` defined here
+...
+9 |     pub fn take_file(f: *mut file_t);
+  |                              ^^^^^^ help: a struct with a similar name exists: `file_s`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0412`.

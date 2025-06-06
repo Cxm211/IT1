@@ -1,0 +1,2 @@
+// Line 485
+::rust::repr::PtrLen cxxbridge1$index(const ::std::shared_ptr<::CrossTensor> &tensor, ::rust::Slice<const const ::std::shared_ptr<::CrossTensor> &> indices, ::std::shared_ptr<::CrossTensor> *return$) noexcept 

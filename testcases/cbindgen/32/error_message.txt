@@ -1,0 +1,1 @@
+ERROR: Cannot use fn input::f (Unsupported type: Type::Slice { bracket_token: Bracket, elem: Type::Path { qself: None, path: Path { leading_colon: None, segments: [PathSegment { ident: Ident(u8), arguments: PathArguments::None }] } } }).

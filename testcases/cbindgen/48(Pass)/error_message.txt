@@ -1,0 +1,3 @@
+t.cc:7:29: error: ‘B’ was not declared in this scope
+    7 | static const uintptr_t A = (B + 1);
+      |

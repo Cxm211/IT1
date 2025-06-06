@@ -1,0 +1,1 @@
+bindgen input.h --allowlist-type Packed -o generated_bindings.rs

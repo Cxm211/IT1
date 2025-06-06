@@ -1,0 +1,1 @@
+bindgen input --allowlist-type "foo" --no-recursive-allowlist --output generated_bindings.rs -- -x c++ -std=c++14

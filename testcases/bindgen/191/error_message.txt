@@ -1,0 +1,86 @@
+error[E0428]: the name `FP_INT_UPWARD` is defined multiple times
+     --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:13105:1
+      |
+1000  | pub const FP_INT_UPWARD: u32 = 0;
+      | --------------------------------- previous definition of the value `FP_INT_UPWARD` here
+
+...
+
+error[E0412]: cannot find type `_Tp` in this scope
+    --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:1250:27
+     |
+1250 |     pub static std_value: _Tp;
+     |                           ^^^ not found in this scope
+
+error[E0412]: cannot find type `_Value` in this scope
+    --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:6555:33
+     |
+6555 |     pub static __gnu_cxx___min: _Value;
+     |                                 ^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `_Value` in this scope
+    --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:6559:33
+     |
+6559 |     pub static __gnu_cxx___max: _Value;
+     |                                 ^^^^^^ not found in this scope
+
+error[E0391]: cycle detected when processing `int_type`
+     --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:17321:21
+      |
+17321 | pub type int_type = int_type;
+      |                     ^^^^^^^^
+      |
+      = note: ...which again requires processing `int_type`, completing the cycle
+note: cycle used when collecting item types in top-level module
+     --> src/lib.rs:1:1
+      |
+1     | / #![allow(non_upper_case_globals)]
+2     | | #![allow(non_camel_case_types)]
+3     | | #![allow(non_snake_case)]
+4     | |
+5     | | include!(concat!(env!("OUT_DIR"), "/test.rs"));
+      | |_______________________________________________^
+
+error: aborting due to 18 previous errors
+
+Some errors have detailed explanations: E0391, E0412, E0428.
+For more information about an error, try `rustc --explain E0391`.
+error: could not compile `test`.
+
+Caused by:
+  process didn't exit successfully: `rustc --crate-name test src/lib.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type lib --emit=dep-info,metadata,link -C debuginfo=2 -C metadata=ea306d16b166d5b8 -C extra-filename=-ea306d16b166d5b8 --out-dir /mnt/c/Users/Anton/rust_ffi/target/debug/deps -C incremental=/mnt/c/Users/Anton/rust_ffi/target/debug/incremental -L dependency=/mnt/c/Users/Anton/rust_ffi/target/debug/deps` (exit code: 1)
+warning: build failed, waiting for other jobs to finish...
+error[E0412]: cannot find type `_Tp` in this scope
+    --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:1250:27
+     |
+1250 |     pub static std_value: _Tp;
+     |                           ^^^ not found in this scope
+
+error[E0412]: cannot find type `_Value` in this scope
+    --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:6555:33
+     |
+6555 |     pub static __gnu_cxx___min: _Value;
+     |                                 ^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `_Value` in this scope
+    --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:6559:33
+     |
+6559 |     pub static __gnu_cxx___max: _Value;
+     |                                 ^^^^^^ not found in this scope
+
+error[E0391]: cycle detected when processing `int_type`
+     --> /mnt/c/Users/Anton/rust_ffi/target/debug/build/test-4a7a62747503f49c/out/test.rs:17321:21
+      |
+17321 | pub type int_type = int_type;
+      |                     ^^^^^^^^
+      |
+      = note: ...which again requires processing `int_type`, completing the cycle
+note: cycle used when collecting item types in top-level module
+     --> src/lib.rs:1:1
+      |
+1     | / #![allow(non_upper_case_globals)]
+2     | | #![allow(non_camel_case_types)]
+3     | | #![allow(non_snake_case)]
+4     | |
+5     | | include!(concat!(env!("OUT_DIR"), "/test.rs"));
+      | |_______________________________________________^

@@ -1,0 +1,5 @@
+error[E0573]: expected type, found module `Foo`
+  --> /tmp/bindgensb/target/debug/build/bindgensb-778298c9127d6c38/out/bindings.rs:10:20
+   |
+10 |     pub fn func(x: Foo);
+   |                    ^^^ not a type

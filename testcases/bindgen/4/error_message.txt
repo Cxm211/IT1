@@ -1,0 +1,16 @@
+error[E0201]: duplicate definitions with name `Write1`:
+    --> /home/bloup/Code/raknet/target/debug/build/raknet-d5cd88364ce5f684/out/bindings.rs:3003:13
+     |
+2811 | /             pub unsafe fn Write1(
+2812 | |                 &mut self,
+2813 | |                 bitStream: *mut root::RakNet::BitStream,
+2814 | |                 numberOfBits: root::RakNet::BitSize_t,
+2815 | |             ) {
+2816 | |                 BitStream_Write1(self, bitStream, numberOfBits)
+2817 | |             }
+     | |_____________- previous definition of `Write1` here
+...
+3003 | /             pub unsafe fn Write1(&mut self) {
+3004 | |                 BitStream_Write11(self)
+3005 | |             }
+     | |_____________^ duplicate definition

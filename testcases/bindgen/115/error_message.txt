@@ -1,0 +1,51 @@
+thread 'main' panicked at 'assertion failed: ctx.resolve_type_through_type_refs(decl).is_opaque()', /home/fitzgen/rust-bindgen/target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4636
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+stack backtrace:
+   0: <bindgen::ir::template::TemplateInstantiation as bindgen::codegen::ToRustTy>::to_rust_ty
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4636
+   1: <bindgen::ir::ty::Type as bindgen::codegen::ToRustTy>::to_rust_ty
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4474
+   2: <bindgen::ir::item::Item as bindgen::codegen::ItemToRustTy>::to_rust_ty
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4309
+   3: <bindgen::ir::context::ItemId as bindgen::codegen::ItemToRustTy>::to_rust_ty
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4304
+   4: <bindgen::ir::ty::Type as bindgen::codegen::ToRustTy>::to_rust_ty
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4476
+   5: <bindgen::ir::item::Item as bindgen::codegen::ItemToRustTy>::to_rust_ty
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4309
+   6: <bindgen::ir::context::ItemId as bindgen::codegen::ItemToRustTy>::to_rust_ty
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4304
+   7: <bindgen::ir::comp::CompInfo as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:2581
+   8: <bindgen::ir::ty::Type as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:1508
+   9: <bindgen::ir::item::Item as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:1301
+  10: <bindgen::ir::module::Module as bindgen::codegen::CodeGenerator>::codegen::{{closure}}
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:1322
+  11: <bindgen::ir::module::Module as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:1346
+  12: <bindgen::ir::item::Item as bindgen::codegen::CodeGenerator>::codegen
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:1287
+  13: bindgen::codegen::codegen::{{closure}}
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4955
+  14: bindgen::ir::context::BindgenContext::gen
+             at ./src/ir/context.rs:578
+  15: bindgen::codegen::codegen
+             at ./target/debug/build/bindgen-fddff672ca36ebc4/out/codegen.rs:4933
+  16: bindgen::Bindings::generate
+             at ./src/lib.rs:748
+  17: bindgen::Builder::generate
+             at ./src/lib.rs:469
+  18: bindgen::main::{{closure}}
+             at ./src/main.rs:55
+  19: std::panicking::try::do_call
+             at /checkout/src/libstd/panicking.rs:454
+  20: __rust_maybe_catch_panic
+             at /checkout/src/libpanic_unwind/lib.rs:98
+  21: std::panicking::try
+             at /checkout/src/libstd/panicking.rs:433
+  22: std::panic::catch_unwind
+             at /checkout/src/libstd/panic.rs:361
+  23: bindgen::main
+             at ./src/main.rs:54

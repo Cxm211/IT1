@@ -1,0 +1,20 @@
+error[E0412]: cannot find type `_Traits` in this scope
+  --> ./open/226/generated_bindings.rs:11:22
+   |
+11 |     pub traits_type: _Traits,
+   |                      ^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `_Traits` in this scope
+  --> ./open/226/generated_bindings.rs:11:22
+   |
+11 |     pub traits_type: _Traits,
+   |                      ^^^^^^^ not found in this scope
+   |
+help: you might be missing a type parameter
+   |
+10 | pub struct A_B<_Traits> {
+   |               +++++++++
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0412`.

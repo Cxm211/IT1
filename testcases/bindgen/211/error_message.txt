@@ -1,0 +1,33 @@
+error[E0412]: cannot find type `e` in this scope
+  --> ./open/211/generated_bindings.rs:12:19
+   |
+12 |     pub h: seal_g<e>,
+   |                   ^ not found in this scope
+   |
+help: you might be missing a type parameter
+   |
+11 | pub struct seal_IntArray<e> {
+   |                         +++
+
+error[E0412]: cannot find type `e` in this scope
+  --> ./open/211/generated_bindings.rs:12:19
+   |
+12 |     pub h: seal_g<e>,
+   |                   ^ not found in this scope
+   |
+help: you might be missing a type parameter
+   |
+11 | pub struct seal_IntArray<e> {
+   |                         +++
+
+warning: type parameter `e` should have an upper camel case name
+ --> ./open/211/generated_bindings.rs:5:19
+  |
+5 | pub struct seal_g<e> {
+  |                   ^ help: convert the identifier to upper camel case: `E`
+  |
+  = note: `#[warn(non_camel_case_types)]` on by default
+
+error: aborting due to 2 previous errors; 1 warning emitted
+
+For more information about this error, try `rustc --explain E0412`.

@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs  --rust-target 1.0 --enable-cxx-namespaces -- -x c++ -std=c++14

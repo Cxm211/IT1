@@ -1,0 +1,1 @@
+thread 'bindgen_test_layout_virtio_net_ctrl_mac' panicked at 'assertion failed: `(left == right)` (left: `12`, right: `4`)'

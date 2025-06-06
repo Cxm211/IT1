@@ -1,0 +1,1 @@
+bindgen input.h --opaque-type "std::.*" --allowlist-function "simple" -o generated_bindings.rs -- -x c++ -std=c++14

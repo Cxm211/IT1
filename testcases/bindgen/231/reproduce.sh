@@ -1,0 +1,1 @@
+bindgen input.h --no-layout-tests --opaque-type '.*' -o generated_bindings.rs -- -x c++

@@ -1,0 +1,26 @@
+running 5 tests
+test __bindgen_test_layout_u_instantiation_81 ... FAILED
+test bindgen_test_layout_I ... ok
+test bindgen_test_layout_JS_AutoIdVector ... FAILED
+test bindgen_test_layout_JS_v ... FAILED
+test bindgen_test_layout_i ... ok
+
+failures:
+
+---- __bindgen_test_layout_u_instantiation_81 stdout ----
+	thread '__bindgen_test_layout_u_instantiation_81' panicked at 'assertion failed: `(left == right)` (left: `72`, right: `136`): Size of template specialization: u < JS_v >', js.rs:100
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
+
+---- bindgen_test_layout_JS_AutoIdVector stdout ----
+	thread 'bindgen_test_layout_JS_AutoIdVector' panicked at 'assertion failed: `(left == right)` (left: `72`, right: `136`): Size of: JS_AutoIdVector', js.rs:93
+
+---- bindgen_test_layout_JS_v stdout ----
+	thread 'bindgen_test_layout_JS_v' panicked at 'assertion failed: `(left == right)` (left: `48`, right: `112`): Size of: JS_v', js.rs:77
+
+
+failures:
+    __bindgen_test_layout_u_instantiation_81
+    bindgen_test_layout_JS_AutoIdVector
+    bindgen_test_layout_JS_v
+
+test result: FAILED. 2 passed; 3 failed; 0 ignored; 0 measured

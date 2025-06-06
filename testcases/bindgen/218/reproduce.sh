@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --rust-target 1.33.0 --with-derive-partialeq --with-derive-eq --with-derive-partialord --with-derive-ord --with-derive-hash --with-derive-default

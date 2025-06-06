@@ -1,0 +1,12 @@
+error[E0412]: cannot find type `A` in this scope
+  --> ./closed/92/reported_bindings.rs:11:25
+   |
+5  | pub struct B {
+   | ------------ similarly named struct `B` defined here
+...
+11 |     pub static mut B_a: A;
+   |                         ^ help: a struct with a similar name exists: `B`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0412`.

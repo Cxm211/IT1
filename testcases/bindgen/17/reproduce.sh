@@ -1,0 +1,1 @@
+bindgen input.cpp -o generated_bindings.rs --generate constructors,types -- -fvisibility=default --target=wasm32-unknown-emscripten 

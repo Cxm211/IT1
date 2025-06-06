@@ -1,0 +1,33 @@
+error[E0428]: the name `b` is defined multiple times
+  --> ./open/174/generated_bindings.rs:10:1
+   |
+9  | pub type b = ::std::os::raw::c_int;
+   | ----------------------------------- previous definition of the type `b` here
+10 | pub type b = ::std::os::raw::c_int;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `b` redefined here
+   |
+   = note: `b` must be defined only once in the type namespace of this module
+
+warning: type `a_b` should have an upper camel case name
+ --> ./open/174/generated_bindings.rs:8:10
+  |
+8 | pub type a_b = ::std::os::raw::c_int;
+  |          ^^^ help: convert the identifier to upper camel case: `AB`
+  |
+  = note: `#[warn(non_camel_case_types)]` on by default
+
+warning: type `b` should have an upper camel case name
+ --> ./open/174/generated_bindings.rs:9:10
+  |
+9 | pub type b = ::std::os::raw::c_int;
+  |          ^ help: convert the identifier to upper camel case: `B`
+
+warning: type `b` should have an upper camel case name
+  --> ./open/174/generated_bindings.rs:10:10
+   |
+10 | pub type b = ::std::os::raw::c_int;
+   |          ^ help: convert the identifier to upper camel case: `B`
+
+error: aborting due to 1 previous error; 3 warnings emitted
+
+For more information about this error, try `rustc --explain E0428`.

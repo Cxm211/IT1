@@ -1,0 +1,40 @@
+$ bindgen test.h -- -x c++ -std=c++14
+thread 'main' panicked at 'assertion failed: `(left == right)` (left: `1`, right: `118`): Couldn't resolve constant type, and it wasn't an nondeductible auto type!', /Users/gulshan/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.22.0/src/ir/var.rs:190
+stack backtrace:
+   1:        0x101d2ba8a - std::sys::imp::backtrace::tracing::imp::write::hd3b65cdfe843284c
+   2:        0x101d2f08f - std::panicking::default_hook::{{closure}}::hf2b7428652613d83
+   3:        0x101d2ed37 - std::panicking::default_hook::h5da8f27db5582938
+   4:        0x101d2f556 - std::panicking::rust_panic_with_hook::hcef1e67c646c6802
+   5:        0x101d2f3f4 - std::panicking::begin_panic::hc2e8ca89533cd10d
+   6:        0x101d2f312 - std::panicking::begin_panic_fmt::h60990696c3c3a88d
+   7:        0x101aa2943 - <bindgen::ir::var::Var as bindgen::parse::ClangSubItemParser>::parse::h731a1c48c5364448
+   8:        0x101a97755 - <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::parse::ha854b5c1a690676f
+   9:        0x101a7adb0 - bindgen::clang::visit_children::h407f548956a98527
+  10:        0x10240351d - _ZN5clang8cxcursor13CursorVisitor5VisitE8CXCursorb
+  11:        0x102404fa9 - _ZN5clang8cxcursor13CursorVisitor23handleDeclForVisitationEPKNS_4DeclE
+  12:        0x102405052 - _ZN5clang8cxcursor13CursorVisitor16VisitDeclContextEPNS_11DeclContextE
+  13:        0x102405b4f - _ZN5clang8cxcursor13CursorVisitor18VisitCXXRecordDeclEPNS_13CXXRecordDeclE
+  14:        0x1024067b9 - _ZN5clang8cxcursor13CursorVisitor22VisitClassTemplateDeclEPNS_17ClassTemplateDeclE
+  15:        0x102404be3 - _ZN5clang11declvisitor4BaseINS0_8make_ptrENS_8cxcursor13CursorVisitorEbE5VisitEPNS_4DeclE
+  16:        0x102403d9f - _ZN5clang8cxcursor13CursorVisitor13VisitChildrenE8CXCursor
+  17:        0x10240dfb9 - clang_visitChildren
+  18:        0x101b3f473 - clang_sys::clang_visitChildren::h3c5e08c86622e596
+  19:        0x101a85d61 - bindgen::ir::comp::CompInfo::from_ty::h8e4ee1f45389b0ff
+  20:        0x101aa0b9e - bindgen::ir::ty::Type::from_clang_ty::hfb38fbdebe1efd4c
+  21:        0x101a99938 - <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id::h8e24d164a9603af1
+  22:        0x101a982f9 - <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::parse::ha854b5c1a690676f
+  23:        0x101aa8309 - bindgen::parse_one::h35c930a99bf4fd69
+  24:        0x101a7c492 - bindgen::clang::visit_children::h4fa0b4d826846788
+  25:        0x10240351d - _ZN5clang8cxcursor13CursorVisitor5VisitE8CXCursorb
+  26:        0x102404fa9 - _ZN5clang8cxcursor13CursorVisitor23handleDeclForVisitationEPKNS_4DeclE
+  27:        0x102405052 - _ZN5clang8cxcursor13CursorVisitor16VisitDeclContextEPNS_11DeclContextE
+  28:        0x102403eb2 - _ZN5clang8cxcursor13CursorVisitor13VisitChildrenE8CXCursor
+  29:        0x10240dfb9 - clang_visitChildren
+  30:        0x101b3f473 - clang_sys::clang_visitChildren::h3c5e08c86622e596
+  31:        0x101aa4e22 - bindgen::Bindings::generate::h10a95595a3650a40
+  32:        0x101aa448a - bindgen::Builder::generate::h182f654606cf3bb2
+  33:        0x101a2c52b - std::panicking::try::do_call::hf25b075f9f1bf285
+  34:        0x101d303ca - __rust_maybe_catch_panic
+  35:        0x101a49515 - bindgen::main::hf1dbef6d6a3a6c4e
+  36:        0x101d303ca - __rust_maybe_catch_panic
+  37:        0x101d2f8f6 - std::rt::lang_start::h87cb84a8b6cb187e

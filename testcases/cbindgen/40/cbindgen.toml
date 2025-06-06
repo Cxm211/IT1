@@ -1,0 +1,9 @@
+language = "C++"
+[struct]
+derive_eq = true
+derive_neq = true
+
+[defines]
+"feature = track_alloc_size" = "DEFINE_TRACK_ALLOC_SIZE"
+
+

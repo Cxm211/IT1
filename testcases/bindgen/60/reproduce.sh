@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --default-enum-style moduleconsts -- -x c++ -std=c++14

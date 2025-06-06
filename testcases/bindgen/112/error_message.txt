@@ -1,0 +1,23 @@
+$ rustc --test --crate-type lib stylo_bindings.rs 
+error[E0412]: cannot find type `T` in this scope
+   --> stylo_bindings.rs:104:23
+    |
+104 |     pub h: RefPtr<i_g<T>>,
+    |                       ^ did you mean `B`?
+
+error[E0412]: cannot find type `T` in this scope
+   --> stylo_bindings.rs:104:23
+    |
+104 |     pub h: RefPtr<i_g<T>>,
+    |                       ^ did you mean `B`?
+
+error[E0204]: the trait `Copy` may not be implemented for this type
+   --> stylo_bindings.rs:102:17
+    |
+102 | #[derive(Debug, Copy, Clone)]
+    |                 ^^^^
+103 | pub struct i {
+104 |     pub h: RefPtr<i_g<T>>,
+    |     --------------------- this field does not implement `Copy`
+
+error: aborting due to previous error

@@ -1,0 +1,1 @@
+api_generated.h:120:22: error: field has incomplete type 'struct wire_Secret'

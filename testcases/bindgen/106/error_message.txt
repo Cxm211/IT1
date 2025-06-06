@@ -1,0 +1,85 @@
+thread 'main' panicked at 'Unknown token while processing namespace: Token { kind: 0, spelling: "::" }'
+
+stack backtrace:
+   0: std::sys::imp::backtrace::tracing::imp::unwind_backtrace
+             at /checkout/src/libstd/sys/unix/backtrace/tracing/gcc_s.rs:49
+   1: std::sys_common::backtrace::_print
+             at /checkout/src/libstd/sys_common/backtrace.rs:71
+   2: std::panicking::default_hook::{{closure}}
+             at /checkout/src/libstd/sys_common/backtrace.rs:60
+             at /checkout/src/libstd/panicking.rs:355
+   3: std::panicking::default_hook
+             at /checkout/src/libstd/panicking.rs:371
+   4: std::panicking::rust_panic_with_hook
+             at /checkout/src/libstd/panicking.rs:549
+   5: std::panicking::begin_panic
+             at /checkout/src/libstd/panicking.rs:511
+   6: std::panicking::begin_panic_fmt
+             at /checkout/src/libstd/panicking.rs:495
+   7: bindgen::ir::context::BindgenContext::tokenize_namespace
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/context.rs:1267
+   8: bindgen::ir::context::BindgenContext::module
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/context.rs:1286
+   9: <bindgen::ir::module::Module as bindgen::parse::ClangSubItemParser>::parse
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/module.rs:79
+  10: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::parse
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/item.rs:956
+  11: bindgen::parse_one
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/lib.rs:1137
+  12: <bindgen::ir::module::Module as bindgen::parse::ClangSubItemParser>::parse::{{closure}}::{{closure}}
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/module.rs:82
+  13: bindgen::clang::visit_children
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/clang.rs:625
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: clang_visitChildren
+  18: clang_sys::clang_visitChildren
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/clang-sys-0.15.2/src/link.rs:95
+  19: bindgen::clang::Cursor::visit
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/clang.rs:370
+  20: <bindgen::ir::module::Module as bindgen::parse::ClangSubItemParser>::parse::{{closure}}
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/module.rs:81
+  21: bindgen::ir::context::BindgenContext::with_module
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/context.rs:1313
+  22: <bindgen::ir::module::Module as bindgen::parse::ClangSubItemParser>::parse
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/module.rs:80
+  23: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::parse
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/item.rs:956
+  24: bindgen::parse_one
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/lib.rs:1137
+  25: bindgen::parse::{{closure}}::{{closure}}
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/lib.rs:1179
+  26: bindgen::clang::visit_children
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/clang.rs:625
+  27: <unknown>
+  28: <unknown>
+  29: <unknown>
+  30: clang_visitChildren
+  31: clang_sys::clang_visitChildren
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/clang-sys-0.15.2/src/link.rs:95
+  32: bindgen::clang::Cursor::visit
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/clang.rs:370
+  33: bindgen::parse::{{closure}}
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/lib.rs:1179
+  34: bindgen::ir::context::BindgenContext::with_module
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/ir/context.rs:1313
+  35: bindgen::parse
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/lib.rs:1178
+  36: bindgen::Bindings::generate
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/lib.rs:1039
+  37: bindgen::Builder::generate
+             at /home/rqou/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.23.1/src/lib.rs:748
+  38: build_script_build::main
+             at ./build.rs:7
+  39: std::panicking::try::do_call
+             at /checkout/src/libstd/panicking.rs:454
+  40: __rust_maybe_catch_panic
+             at /checkout/src/libpanic_unwind/lib.rs:98
+  41: std::rt::lang_start
+             at /checkout/src/libstd/panicking.rs:433
+             at /checkout/src/libstd/panic.rs:361
+             at /checkout/src/libstd/rt.rs:57
+  42: main
+  43: __libc_start_main
+  44: _start

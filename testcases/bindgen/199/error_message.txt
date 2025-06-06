@@ -1,0 +1,117 @@
+error[E0428]: the name `__node_pointer` is defined multiple times
+  --> ./open/199/generated_bindings.rs:45:5
+   |
+44 |     pub type __node_pointer = root::__node_pointer;
+   |     ----------------------------------------------- previous definition of the type `__node_pointer` here
+45 |     pub type __node_pointer = *mut root::__tree_node;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `__node_pointer` redefined here
+   |
+   = note: `__node_pointer` must be defined only once in the type namespace of this module
+
+error[E0433]: failed to resolve: you might be missing crate `core`
+  --> ./open/199/generated_bindings.rs:34:46
+   |
+34 | ...am::v"][::core::mem::offset_of!(stream, v) - 0usize];
+   |              ^^^^ you might be missing crate `core`
+
+error[E0433]: failed to resolve: you might be missing crate `core`
+  --> ./open/199/generated_bindings.rs:32:34
+   |
+32 | ...tream"][::core::mem::size_of::<stream>() - 1usize];
+   |              ^^^^ you might be missing crate `core`
+   |
+help: try using `std` instead of `core`
+   |
+32 |             ["Size of stream"][::std::mem::size_of::<stream>() - 1usize];
+   |                                  ~~~
+help: consider importing this module
+   |
+23 +         use std::mem;
+   |
+help: if you import `mem`, refer to it directly
+   |
+32 -             ["Size of stream"][::core::mem::size_of::<stream>() - 1usize];
+32 +             ["Size of stream"][mem::size_of::<stream>() - 1usize];
+   |
+
+error[E0433]: failed to resolve: you might be missing crate `core`
+  --> ./open/199/generated_bindings.rs:33:39
+   |
+33 | ...tream"][::core::mem::align_of::<stream>() - 1usize];
+   |              ^^^^ you might be missing crate `core`
+   |
+help: try using `std` instead of `core`
+   |
+33 |             ["Alignment of stream"][::std::mem::align_of::<stream>() - 1usize];
+   |                                       ~~~
+help: consider importing this module
+   |
+23 +         use std::mem;
+   |
+help: if you import `mem`, refer to it directly
+   |
+33 -             ["Alignment of stream"][::core::mem::align_of::<stream>() - 1usize];
+33 +             ["Alignment of stream"][mem::align_of::<stream>() - 1usize];
+   |
+
+error[E0433]: failed to resolve: you might be missing crate `core`
+  --> ./open/199/generated_bindings.rs:40:16
+   |
+40 |             [::core::mem::size_of::<root::y>() - 1usize];
+   |                ^^^^ you might be missing crate `core`
+   |
+help: try using `std` instead of `core`
+   |
+40 |             [::std::mem::size_of::<root::y>() - 1usize];
+   |                ~~~
+help: consider importing this module
+   |
+5  +     use std::mem;
+   |
+help: if you import `mem`, refer to it directly
+   |
+40 -             [::core::mem::size_of::<root::y>() - 1usize];
+40 +             [mem::size_of::<root::y>() - 1usize];
+   |
+
+error[E0433]: failed to resolve: you might be missing crate `core`
+  --> ./open/199/generated_bindings.rs:42:16
+   |
+42 |             [::core::mem::align_of::<root::y>() - 1usize];
+   |                ^^^^ you might be missing crate `core`
+   |
+help: try using `std` instead of `core`
+   |
+42 |             [::std::mem::align_of::<root::y>() - 1usize];
+   |                ~~~
+help: consider importing this module
+   |
+5  +     use std::mem;
+   |
+help: if you import `mem`, refer to it directly
+   |
+42 -             [::core::mem::align_of::<root::y>() - 1usize];
+42 +             [mem::align_of::<root::y>() - 1usize];
+   |
+
+error[E0391]: cycle detected when expanding type alias `root::__node_pointer`
+  --> ./open/199/generated_bindings.rs:44:31
+   |
+44 |     pub type __node_pointer = root::__node_pointer;
+   |                               ^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: ...which immediately requires expanding type alias `root::__node_pointer` again
+   = note: type aliases cannot be recursive
+   = help: consider using a struct, enum, or union instead to break the cycle
+   = help: see <https://doc.rust-lang.org/reference/types.html#recursive-types> for more information
+note: cycle used when checking that `root::__node_pointer` is well-formed
+  --> ./open/199/generated_bindings.rs:44:5
+   |
+44 |     pub type __node_pointer = root::__node_pointer;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^
+   = note: see https://rustc-dev-guide.rust-lang.org/overview.html#queries and https://rustc-dev-guide.rust-lang.org/query.html for more information
+
+error: aborting due to 7 previous errors
+
+Some errors have detailed explanations: E0391, E0428, E0433.
+For more information about an error, try `rustc --explain E0391`.

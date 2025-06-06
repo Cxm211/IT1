@@ -1,0 +1,34 @@
+thread 'main' panicked at 'C'mon: Continue', rust/1.14/src/rust/src/libcore/result.rs:837
+stack backtrace:
+   1:     0x7f4cb52330ca - std::sys::imp::backtrace::tracing::imp::write::h917062bce4ff48c3
+                        at rust/1.14/src/rust/src/libstd/sys/unix/backtrace/tracing/gcc_s.rs:42
+   2:     0x7f4cb523932f - std::panicking::default_hook::{{closure}}::h0bacac31b5ed1870
+                        at rust/1.14/src/rust/src/libstd/panicking.rs:247
+   3:     0x7f4cb5237626 - std::panicking::default_hook::h5897799da33ece67
+                        at rust/1.14/src/rust/src/libstd/panicking.rs:263
+   4:     0x7f4cb5237c77 - std::panicking::rust_panic_with_hook::h109e116a3a861224
+                        at rust/1.14/src/rust/src/libstd/panicking.rs:451
+   5:     0x7f4cb5237b04 - std::panicking::begin_panic::hbb38be1379e09df0
+                        at rust/1.14/src/rust/src/libstd/panicking.rs:413
+   6:     0x7f4cb5237a29 - std::panicking::begin_panic_fmt::h26713cea9bce3ab0
+                        at rust/1.14/src/rust/src/libstd/panicking.rs:397
+   7:     0x7f4cb52379b7 - rust_begin_unwind
+                        at rust/1.14/src/rust/src/libstd/panicking.rs:373
+   8:     0x7f4cb527903d - core::panicking::panic_fmt::hcfbb59eeb7f27f75
+                        at rust/1.14/src/rust/src/libcore/panicking.rs:69
+   9:     0x7f4cb4f4f999 - core::result::unwrap_failed::h4e4433ae10a88bed
+  10:     0x7f4cb4f8bc8f - libbindgen::ir::ty::Type::from_clang_ty::h97c6dca021b74c7b
+  11:     0x7f4cb4f8a0f6 - libbindgen::ir::ty::Type::from_clang_ty::h97c6dca021b74c7b
+  12:     0x7f4cb4f869e6 - <libbindgen::ir::item::Item as libbindgen::parse::ClangItemParser>::from_ty_with_id::h21c03d7c8b580fdd
+  13:     0x7f4cb4f79bef - libbindgen::ir::context::BindgenContext::resolve_typerefs::hc4ae2c59af527bef
+  14:     0x7f4cb4f8eed2 - libbindgen::Bindings::generate::h0f3a09f9547090eb
+  15:     0x7f4cb4f8e336 - libbindgen::Builder::generate::haa90db6fe5ae5d21
+  16:     0x7f4cb4f3df4f - bindgen::main::h9b246eb7746cc895
+  17:     0x7f4cb524221a - __rust_maybe_catch_panic
+                        at rust/1.14/src/rust/src/libpanic_unwind/lib.rs:97
+  18:     0x7f4cb5238695 - std::rt::lang_start::hd661476ce2fc2931
+                        at rust/1.14/src/rust/src/libstd/panicking.rs:332
+                        at rust/1.14/src/rust/src/libstd/panic.rs:351
+                        at rust/1.14/src/rust/src/libstd/rt.rs:57
+  19:     0x7f4cb42fdb14 - __libc_start_main
+  20:     0x7f4cb4f1f614 - <unknown>

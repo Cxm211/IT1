@@ -1,0 +1,5 @@
+---- p_ffi::bindgen_test_layout_La_x86_64_vector stdout ----
+thread 'p_ffi::bindgen_test_layout_La_x86_64_vector' panicked at 'assertion failed: `(left == right)`
+  left: `8`,
+ right: `16`: Alignment of La_x86_64_vector', /home/vext01/research/phdrs_pv/target/debug/build/phdrs-766b5f3742f78b0d/out/bindings.rs:7077:5
+note: Run with `RUST_BACKTRACE=1` for a backtrace.

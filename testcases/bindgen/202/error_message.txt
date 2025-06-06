@@ -1,0 +1,28 @@
+error[E0412]: cannot find type `Compare` in this scope
+  --> ./open/202/generated_bindings.rs:20:44
+   |
+20 | pub type AZ_EBusRouterPolicy_Container = a<Compare>;
+   |                                            ^^^^^^^ not found in this scope
+   |
+help: you might be missing a type parameter
+   |
+20 | pub type AZ_EBusRouterPolicy_Container<Compare> = a<Compare>;
+   |                                       +++++++++
+
+warning: type `AZ_EBusRouterPolicy_d` should have an upper camel case name
+  --> ./open/202/generated_bindings.rs:19:10
+   |
+19 | pub type AZ_EBusRouterPolicy_d = AZ_c;
+   |          ^^^^^^^^^^^^^^^^^^^^^ help: convert the identifier to upper camel case: `AzEbusRouterPolicyD`
+   |
+   = note: `#[warn(non_camel_case_types)]` on by default
+
+warning: type `AZ_EBusRouterPolicy_Container` should have an upper camel case name
+  --> ./open/202/generated_bindings.rs:20:10
+   |
+20 | pub type AZ_EBusRouterPolicy_Container = a<Compare>;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: convert the identifier to upper camel case: `AzEbusRouterPolicyContainer`
+
+error: aborting due to 1 previous error; 2 warnings emitted
+
+For more information about this error, try `rustc --explain E0412`.

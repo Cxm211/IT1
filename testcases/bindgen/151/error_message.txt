@@ -1,0 +1,77 @@
+error[E0658]: use of unstable library feature 'ptr_metadata'
+  --> ./open/151/generated_bindings.rs:18:34
+   |
+18 | ...   let p: *const Self = ::std::ptr::from_raw_parts(::std::p...
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: see issue #81513 <https://github.com/rust-lang/rust/issues/81513> for more information
+
+error[E0658]: use of unstable library feature 'ptr_metadata'
+  --> ./open/151/generated_bindings.rs:60:11
+   |
+60 |         &*::std::ptr::from_raw_parts(ptr as *const (), len)
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: see issue #81513 <https://github.com/rust-lang/rust/issues/81513> for more information
+
+error[E0658]: use of unstable library feature 'ptr_metadata'
+  --> ./open/151/generated_bindings.rs:76:20
+   |
+76 | ...   .write(::std::ptr::from_raw_parts_mut(ptr as *mut (), le...
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: see issue #81513 <https://github.com/rust-lang/rust/issues/81513> for more information
+
+error[E0277]: the size for values of type `FAM` cannot be known at compilation time
+ --> ./open/151/generated_bindings.rs:6:15
+  |
+4 | pub struct Test<FAM: ?Sized = [::std::os::raw::c_long; 0]> {
+  |                 ----------------------------------------- this type parameter needs to be `Sized`
+5 |     pub Head: ::std::os::raw::c_short,
+6 |     pub Tail: FAM,
+  |               ^^^ doesn't have a size known at compile-time
+  |
+  = note: the last field of a packed struct may only have a dynamically sized type if it does not need drop to be run
+  = help: change the field's type to have a statically known size
+help: consider removing the `?Sized` bound to make the type parameter `Sized`
+  |
+4 - pub struct Test<FAM: ?Sized = [::std::os::raw::c_long; 0]> {
+4 + pub struct Test<FAM = [::std::os::raw::c_long; 0]> {
+  |
+help: borrowed types always have a statically known size
+  |
+6 |     pub Tail: &FAM,
+  |               +
+help: the `Box` type always has a statically known size and allocates its contents in the heap
+  |
+6 |     pub Tail: Box<FAM>,
+  |               ++++   +
+
+error[E0658]: use of unstable library feature 'layout_for_ptr'
+  --> ./open/151/generated_bindings.rs:19:13
+   |
+19 |             ::std::alloc::Layout::for_value_raw(p)
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: see issue #69835 <https://github.com/rust-lang/rust/issues/69835> for more information
+
+error[E0658]: use of unstable library feature 'ptr_metadata'
+  --> ./open/151/generated_bindings.rs:25:52
+   |
+25 | ...   let (ptr, len) = (self as *const Self).to_raw_parts();
+   |                                              ^^^^^^^^^^^^
+   |
+   = note: see issue #81513 <https://github.com/rust-lang/rust/issues/81513> for more information
+
+error[E0658]: use of unstable library feature 'ptr_metadata'
+  --> ./open/151/generated_bindings.rs:32:50
+   |
+32 |             let (ptr, len) = (self as *mut Self).to_raw_parts();
+   |                                                  ^^^^^^^^^^^^
+   |
+   = note: see issue #81513 <https://github.com/rust-lang/rust/issues/81513> for more information
+
+error: aborting due to 7 previous errors
+
+Some errors have detailed explanations: E0277, E0658.
+For more information about an error, try `rustc --explain E0277`.

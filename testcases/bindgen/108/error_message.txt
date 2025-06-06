@@ -1,0 +1,9 @@
+error[E0412]: cannot find type `example_struct1` in this scope
+ --> ./closed/108/reported_bindings.rs:6:17
+  |
+6 |     pub field1: example_struct1,
+  |                 ^^^^^^^^^^^^^^^ not found in this scope
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0412`.

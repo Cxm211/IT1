@@ -1,0 +1,2 @@
+bindgen input1.h -o generated_bindings1.rs --allowlist-item "VectorNestedWrapper" -- -x c++ -std=c++14
+bindgen input2.h -o generated_bindings2.rs --allowlist-item "VectorSpecialWrapper" -- -x c++ -std=c++14

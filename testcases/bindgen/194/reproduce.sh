@@ -1,0 +1,1 @@
+bindgen input.h --blocklist-function enumerateObjectsUsingBlock  --blocklist-type FooWithBlock --generate-block --objc-extern-crate --block-extern-crate  -- -x objective-c -fblocks

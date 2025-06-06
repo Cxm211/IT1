@@ -1,0 +1,9 @@
+error[E0080]: evaluation of constant value failed
+  --> ./open/235/generated_bindings.rs:53:5
+   |
+53 |     ["Offset of field: D::bazz"][::std::mem::offset_of!(D, bazz) - 28usiz...
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ index out of bounds: the length is 1 but the index is 4
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0080`.

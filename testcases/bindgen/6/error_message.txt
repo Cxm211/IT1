@@ -1,0 +1,53 @@
+$ RUST_BACKTRACE=1 cargo run /Users/adetaylor/reduced-fiddle/minimized.hpp 
+   Compiling bindgen v0.58.1 (/Users/adetaylor/dev/bindgen)
+    Finished dev [unoptimized + debuginfo] target(s) in 4.95s
+     Running `target/debug/bindgen /Users/adetaylor/reduced-fiddle/minimized.hpp`
+/Users/adetaylor/reduced-fiddle/minimized.hpp:32:11: warning: expression result unused [-Wunused-value], err: false
+/Users/adetaylor/reduced-fiddle/minimized.hpp:20:11: warning: expression result unused [-Wunused-value], err: false
+/Users/adetaylor/reduced-fiddle/minimized.hpp:21:3: warning: non-void function does not return a value [-Wreturn-type], err: false
+/Users/adetaylor/reduced-fiddle/minimized.hpp:19:21: warning: instantiation of variable '(anonymous namespace)::(anonymous namespace)::(anonymous namespace)::g<(anonymous namespace)::(anonymous namespace)::(anonymous namespace)::j, (anonymous namespace)::(anonymous namespace)::(anonymous namespace)::i>::h' required here, but no definition is available [-Wundefined-var-template], err: false
+/Users/adetaylor/reduced-fiddle/minimized.hpp:6:20: warning: expression result unused [-Wunused-value], err: false
+/Users/adetaylor/reduced-fiddle/minimized.hpp:6:23: warning: non-void function does not return a value [-Wreturn-type], err: false
+/Users/adetaylor/reduced-fiddle/minimized.hpp:22:21: warning: variable '(anonymous namespace)::(anonymous namespace)::(anonymous namespace)::g<(anonymous namespace)::(anonymous namespace)::(anonymous namespace)::j, (anonymous namespace)::(anonymous namespace)::(anonymous namespace)::i>::h' has internal linkage but is not defined [-Wundefined-internal], err: false
+thread 'main' panicked at 'assertion failed: `(left == right)`
+  left: `Some(TypeId(ItemId(50)))`,
+ right: `None`', src/ir/context.rs:721:13
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/392ba2ba1a7d6c542d2459fb8133bebf62a4a423/library/std/src/panicking.rs:493:5
+   1: core::panicking::panic_fmt
+             at /rustc/392ba2ba1a7d6c542d2459fb8133bebf62a4a423/library/core/src/panicking.rs:92:14
+   2: core::panicking::assert_failed_inner
+             at /rustc/392ba2ba1a7d6c542d2459fb8133bebf62a4a423/library/core/src/panicking.rs:160:17
+   3: core::panicking::assert_failed
+             at /Users/adetaylor/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/panicking.rs:117:5
+   4: bindgen::ir::context::BindgenContext::add_item
+             at ./src/ir/context.rs:721:13
+   5: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+             at ./src/ir/item.rs:1636:17
+   6: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty
+             at ./src/ir/item.rs:1522:9
+   7: bindgen::ir::context::BindgenContext::resolve_typerefs
+             at ./src/ir/context.rs:901:36
+   8: bindgen::ir::context::BindgenContext::gen
+             at ./src/ir/context.rs:1134:9
+   9: bindgen::codegen::codegen
+             at ./src/codegen/mod.rs:4184:5
+  10: bindgen::Bindings::generate
+             at ./src/lib.rs:2289:32
+  11: bindgen::Builder::generate
+             at ./src/lib.rs:1434:9
+  12: bindgen::main::{{closure}}
+             at ./src/main.rs:54:17
+  13: std::panicking::try::do_call
+             at /Users/adetaylor/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/std/src/panicking.rs:379:40
+  14: ___rust_try
+  15: std::panicking::try
+             at /Users/adetaylor/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/std/src/panicking.rs:343:19
+  16: std::panic::catch_unwind
+             at /Users/adetaylor/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/std/src/panic.rs:431:14
+  17: bindgen::main
+             at ./src/main.rs:53:34
+  18: core::ops::function::FnOnce::call_once
+             at /Users/adetaylor/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs:227:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.

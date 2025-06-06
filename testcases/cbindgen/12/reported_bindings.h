@@ -1,0 +1,1 @@
+extern char[128] MCRT_ERROR_TEXT;

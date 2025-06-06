@@ -1,0 +1,1 @@
+bindgen input.h --output generated_bindings.rs --blocklist-function "ExternFunction" --blocklist-function "foo::NamespacedFunction" --blocklist-function "C_ClassMethod" --enable-cxx-namespaces -- -x c++ -std=c++14

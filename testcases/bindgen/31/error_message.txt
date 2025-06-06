@@ -1,0 +1,4 @@
+error: failed to run custom build command for `lmbr_sys v0.1.0 (/XXX/lmbr/lmbr_sys)`
+
+Caused by:
+  process didn't exit successfully: `/XXX/lmbr/target/debug/build/lmbr_sys-90ad57bc07f38d53/build-script-build` (signal: 4, SIGILL: illegal instruction)

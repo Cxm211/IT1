@@ -1,0 +1,14 @@
+running 1 test
+test bindgen_test_layout_foo ... FAILED
+
+failures:
+
+---- bindgen_test_layout_foo stdout ----
+        thread 'bindgen_test_layout_foo' panicked at 'assertion failed: `(left == right)` (left: `4`, right: `1`): Alignment of foo', testcase.rs:12
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
+
+
+failures:
+    bindgen_test_layout_foo
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured

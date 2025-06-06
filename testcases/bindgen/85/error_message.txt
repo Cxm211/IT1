@@ -1,0 +1,14 @@
+clang-4.0: warning: treating 'c-header' input as 'c++-header' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+error[E0428]: the name `a` is defined multiple times
+ --> /tmp/bindings-cwqNMA.rs:4:1
+  |
+3 | pub const a: ::std::os::raw::c_uint = 0;
+  | ---------------------------------------- previous definition of the value `a` here
+4 | pub const a: _bindgen_ty_1 = _bindgen_ty_1::a;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `a` redefined here
+  |
+  = note: `a` must be defined only once in the value namespace of this module
+
+error: aborting due to previous error
+
+Interesting: bindgen emitted Rust code that won't compile!

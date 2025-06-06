@@ -1,0 +1,7 @@
+test bindgen_test_layout_Foo ... FAILED
+
+failures:
+
+---- bindgen_test_layout_Foo stdout ----
+        thread 'bindgen_test_layout_Foo' panicked at 'assertion failed: `(left == right)` (left: `1`, right: `0`): Size of: Foo', lib.rs:34
+note: Run with `RUST_BACKTRACE=1` for a backtrace.

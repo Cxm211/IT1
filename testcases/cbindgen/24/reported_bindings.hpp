@@ -1,0 +1,1 @@
+static const wchar_t QUOTE = ''';

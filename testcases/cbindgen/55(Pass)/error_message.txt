@@ -1,0 +1,62 @@
+thread 'main' panicked at 'Unable to mangle generic parameter ConstPtr(Path(GenericPath { path: Path { name: "str" }, export_name: "str", generics: [], ctype: None })) for 'Vec'', /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/mangle.rs:52:17
+stack backtrace:
+   0: std::sys::unix::backtrace::tracing::imp::unwind_backtrace
+             at src/libstd/sys/unix/backtrace/tracing/gcc_s.rs:39
+   1: std::sys_common::backtrace::_print
+             at src/libstd/sys_common/backtrace.rs:71
+   2: std::panicking::default_hook::{{closure}}
+             at src/libstd/sys_common/backtrace.rs:59
+             at src/libstd/panicking.rs:197
+   3: std::panicking::default_hook
+             at src/libstd/panicking.rs:211
+   4: <std::panicking::begin_panic::PanicPayload<A> as core::panic::BoxMeUp>::get
+             at src/libstd/panicking.rs:478
+   5: std::panicking::continue_panic_fmt
+             at src/libstd/panicking.rs:381
+   6: std::panicking::try::do_call
+             at src/libstd/panicking.rs:336
+   7: cbindgen::bindgen::mangle::internal_mangle_name
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/mangle.rs:52
+   8: cbindgen::bindgen::mangle::internal_mangle_name
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/mangle.rs:37
+   9: cbindgen::bindgen::mangle::internal_mangle_path
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/mangle.rs:17
+  10: cbindgen::bindgen::mangle::mangle_path
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/mangle.rs:8
+  11: cbindgen::bindgen::ir::generic_path::GenericPath::load::{{closure}}
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/ir/opaque.rs:120
+  12: cbindgen::bindgen::ir::ty::Type::specialize::{{closure}}
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/ir/ty.rs:554
+  13: cbindgen::bindgen::ir::ty::Type::specialize::{{closure}}
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/ir/ty.rs:564
+  14: cbindgen::bindgen::ir::ty::Type::specialize::{{closure}}
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/ir/typedef.rs:108
+  15: cbindgen::bindgen::library::Library::instantiate_monomorphs::{{closure}}
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/library.rs:367
+  16: cbindgen::bindgen::ir::item::ItemMap<T>::get_items::{{closure}}
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/ir/item.rs:188
+  17: cbindgen::bindgen::library::Library::instantiate_monomorphs
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/library.rs:366
+  18: cbindgen::bindgen::ir::function::Function::rename_for_config::{{closure}}
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/library.rs:63
+  19: <std::collections::hash::map::RandomState as core::hash::BuildHasher>::build_hasher
+             at /Users/elevy/.cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.9.0/src/bindgen/builder.rs:335
+  20: build_script_build::main
+             at some-ffi/build.rs:10
+  21: std::rt::lang_start::{{closure}}
+             at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c/src/libstd/rt.rs:64
+  22: std::panicking::try::do_call
+             at src/libstd/rt.rs:49
+             at src/libstd/panicking.rs:293
+  23: panic_unwind::dwarf::eh::read_encoded_pointer
+             at src/libpanic_unwind/lib.rs:85
+  24: std::panicking::update_count_then_panic
+             at src/libstd/panicking.rs:272
+             at src/libstd/panic.rs:394
+             at src/libstd/rt.rs:48
+  25: std::rt::lang_start
+             at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c/src/libstd/rt.rs:64
+  26: build_script_build::main
+
+
+Process finished with exit code 101

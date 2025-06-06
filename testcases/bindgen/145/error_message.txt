@@ -1,0 +1,8 @@
+error[E0428]: a value named `systick_millis_count` has already been defined in this module
+    --> src/bindings.rs:3231:5
+     |
+3207 |     pub static mut systick_millis_count: ::std::os::raw::c_uint;
+     |     ------------------------------------------------------------ previous definition of `systick_millis_count` here
+...
+3231 |     pub static mut systick_millis_count: ::std::os::raw::c_uint;
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ already defined

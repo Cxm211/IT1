@@ -1,0 +1,150 @@
+thread 'main' panicked at 'Not an item: ItemId(20)', src/ir/context.rs:1472:21
+stack backtrace:
+0: rust_begin_unwind
+            at /rustc/7af1f55ae359e731c2c303f5d98e42a1a8163af0/library/std/src/panicking.rs:493:5
+1: std::panicking::begin_panic_fmt
+            at /rustc/7af1f55ae359e731c2c303f5d98e42a1a8163af0/library/std/src/panicking.rs:435:5
+2: bindgen::ir::context::BindgenContext::resolve_item
+            at ./src/ir/context.rs:1472:21
+3: bindgen::ir::context::ItemId::as_type_id
+            at ./src/ir/context.rs:89:20
+4: bindgen::ir::context::ItemId::expect_type_id
+            at ./src/ir/context.rs:98:17
+5: bindgen::ir::comp::CompInfo::from_ty::{{closure}}
+            at ./src/ir/comp.rs:1411:33
+6: bindgen::clang::visit_children
+            at ./src/clang.rs:906:5
+7: __ZN5clang8cxcursor13CursorVisitor5VisitE8CXCursorb
+8: __ZN5clang8cxcursor13CursorVisitor23handleDeclForVisitationEPKNS_4DeclE
+9: __ZN5clang8cxcursor13CursorVisitor16VisitDeclContextEPNS_11DeclContextE
+10: __ZN5clang8cxcursor13CursorVisitor18VisitCXXRecordDeclEPNS_13CXXRecordDeclE
+11: __ZN5clang8cxcursor13CursorVisitor13VisitChildrenE8CXCursor
+12: _clang_visitChildren
+13: clang_sys::clang_visitChildren
+            at /Users/pcwalton/.cargo/registry/src/github.com-1ecc6299db9ec823/clang-sys-1.0.3/src/link.rs:165:17
+14: bindgen::clang::Cursor::visit
+            at ./src/clang.rs:406:13
+15: bindgen::ir::comp::CompInfo::from_ty
+            at ./src/ir/comp.rs:1292:9
+16: bindgen::ir::ty::Type::from_clang_ty
+            at ./src/ir/ty.rs:1138:35
+17: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+            at ./src/ir/item.rs:1646:22
+18: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref_with_id
+            at ./src/ir/item.rs:1496:20
+19: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref
+            at ./src/ir/item.rs:1469:9
+20: bindgen::ir::ty::Type::from_clang_ty
+            at ./src/ir/ty.rs:1074:25
+21: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+            at ./src/ir/item.rs:1646:22
+22: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref_with_id
+            at ./src/ir/item.rs:1496:20
+23: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref
+            at ./src/ir/item.rs:1469:9
+24: bindgen::ir::function::args_from_ty_and_cursor::{{closure}}
+            at ./src/ir/function.rs:344:20
+25: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &mut F>::call_once
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs:280:13
+26: core::option::Option<T>::map
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs:487:29
+27: <core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::next
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/map.rs:101:9
+28: <alloc::vec::Vec<T> as alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/vec/spec_from_iter_nested.rs:23:32
+29: <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/vec/spec_from_iter.rs:36:9
+30: <alloc::vec::Vec<T> as core::iter::traits::collect::FromIterator<T>>::from_iter
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:2406:9
+31: core::iter::traits::iterator::Iterator::collect
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs:1798:9
+32: bindgen::ir::function::args_from_ty_and_cursor
+            at ./src/ir/function.rs:328:5
+33: bindgen::ir::function::FunctionSig::from_ty
+            at ./src/ir/function.rs:414:17
+34: bindgen::ir::ty::Type::from_clang_ty
+            at ./src/ir/ty.rs:1116:37
+35: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+            at ./src/ir/item.rs:1646:22
+36: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty
+            at ./src/ir/item.rs:1543:9
+37: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::parse
+            at ./src/ir/item.rs:1400:19
+38: bindgen::ir::comp::CompInfo::from_ty::{{closure}}
+            at ./src/ir/comp.rs:1488:31
+39: bindgen::clang::visit_children
+            at ./src/clang.rs:906:5
+40: __ZN5clang8cxcursor13CursorVisitor5VisitE8CXCursorb
+41: __ZN5clang8cxcursor13CursorVisitor23handleDeclForVisitationEPKNS_4DeclE
+42: __ZN5clang8cxcursor13CursorVisitor16VisitDeclContextEPNS_11DeclContextE
+43: __ZN5clang8cxcursor13CursorVisitor18VisitCXXRecordDeclEPNS_13CXXRecordDeclE
+44: __ZN5clang8cxcursor13CursorVisitor13VisitChildrenE8CXCursor
+45: _clang_visitChildren
+46: clang_sys::clang_visitChildren
+            at /Users/pcwalton/.cargo/registry/src/github.com-1ecc6299db9ec823/clang-sys-1.0.3/src/link.rs:165:17
+47: bindgen::clang::Cursor::visit
+            at ./src/clang.rs:406:13
+48: bindgen::ir::comp::CompInfo::from_ty
+            at ./src/ir/comp.rs:1292:9
+49: bindgen::ir::ty::Type::from_clang_ty
+            at ./src/ir/ty.rs:1138:35
+50: bindgen::ir::ty::Type::from_clang_ty
+            at ./src/ir/ty.rs:1178:28
+51: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+            at ./src/ir/item.rs:1646:22
+52: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref_with_id
+            at ./src/ir/item.rs:1496:20
+53: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_or_ref
+            at ./src/ir/item.rs:1469:9
+54: bindgen::ir::template::TemplateInstantiation::from_ty::{{closure}}::{{closure}}
+            at ./src/ir/template.rs:236:25
+55: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &mut F>::call_once
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs:280:13
+56: core::option::Option<T>::map
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs:487:29
+57: <core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::next
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/map.rs:101:9
+58: <alloc::vec::Vec<T> as alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/vec/spec_from_iter_nested.rs:23:32
+59: <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/vec/spec_from_iter.rs:36:9
+60: <alloc::vec::Vec<T> as core::iter::traits::collect::FromIterator<T>>::from_iter
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:2406:9
+61: core::iter::traits::iterator::Iterator::collect
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs:1798:9
+62: bindgen::ir::template::TemplateInstantiation::from_ty::{{closure}}
+            at ./src/ir/template.rs:233:17
+63: core::option::Option<T>::map_or
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs:514:24
+64: bindgen::ir::template::TemplateInstantiation::from_ty
+            at ./src/ir/template.rs:227:29
+65: bindgen::ir::ty::Type::from_clang_ty
+            at ./src/ir/ty.rs:794:19
+66: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+            at ./src/ir/item.rs:1646:22
+67: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty
+            at ./src/ir/item.rs:1543:9
+68: bindgen::ir::context::BindgenContext::resolve_typerefs
+            at ./src/ir/context.rs:925:36
+69: bindgen::ir::context::BindgenContext::gen
+            at ./src/ir/context.rs:1157:9
+70: bindgen::codegen::codegen
+            at ./src/codegen/mod.rs:4227:5
+71: bindgen::Bindings::generate
+            at ./src/lib.rs:2349:32
+72: bindgen::Builder::generate
+            at ./src/lib.rs:1469:9
+73: bindgen::main::{{closure}}
+            at ./src/main.rs:54:17
+74: std::panicking::try::do_call
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/std/src/panicking.rs:379:40
+75: ___rust_try
+76: std::panicking::try
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/std/src/panicking.rs:343:19
+77: std::panic::catch_unwind
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/std/src/panic.rs:431:14
+78: bindgen::main
+            at ./src/main.rs:53:34
+79: core::ops::function::FnOnce::call_once
+            at /Users/pcwalton/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs:227:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.

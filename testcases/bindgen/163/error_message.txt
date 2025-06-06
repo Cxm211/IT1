@@ -1,0 +1,25 @@
+thread 'main' panicked at 'assertion failed: `(left == right)`
+  left: `177`,
+ right: `118`: Couldn't resolve constant type, and it wasn't an nondeductible auto type!', /Users/levi.morrison/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.59.2/src/ir/var.rs:318:25
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/f1edd0429582dd29cccacaf50fd134b05593bd9c/library/std/src/panicking.rs:517:5
+   1: core::panicking::panic_fmt
+             at /rustc/f1edd0429582dd29cccacaf50fd134b05593bd9c/library/core/src/panicking.rs:100:14
+   2: core::panicking::assert_failed_inner
+             at /rustc/f1edd0429582dd29cccacaf50fd134b05593bd9c/library/core/src/panicking.rs:175:23
+   3: core::panicking::assert_failed
+   4: <bindgen::ir::var::Var as bindgen::parse::ClangSubItemParser>::parse
+   5: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::parse
+   6: bindgen::parse_one
+   7: bindgen::clang::visit_children
+   8: __ZN5clang8cxcursor13CursorVisitor5VisitE8CXCursorb
+   9: __ZN5clang8cxcursor13CursorVisitor23handleDeclForVisitationEPKNS_4DeclE
+  10: __ZN5clang8cxcursor13CursorVisitor16VisitDeclContextEPNS_11DeclContextE
+  11: __ZN5clang8cxcursor13CursorVisitor13VisitChildrenE8CXCursor
+  12: _clang_visitChildren
+  13: clang_sys::clang_visitChildren
+  14: bindgen::Builder::generate
+  15: std::panicking::try
+  16: bindgen::main
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.

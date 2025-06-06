@@ -1,0 +1,15 @@
+error[E0412]: cannot find type `A` in this scope
+  --> <anon>:17:37
+   |
+17 |     pub fn B_m_fn1(this: *mut B) -> A;
+   |                                     ^ did you mean `B`?
+
+error[E0412]: cannot find type `A` in this scope
+  --> <anon>:24:39
+   |
+24 |     pub unsafe fn m_fn1(&mut self) -> A { B_m_fn1(self) }
+   |                                       ^ did you mean `B`?
+
+error[E0601]: main function not found
+
+error: aborting due to 3 previous errors

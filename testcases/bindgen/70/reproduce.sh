@@ -1,0 +1,1 @@
+bindgen input.h  --with-derive-hash --no-recursive-allowlist --allowlist-type "foo" -o generated_bindings.rs -- -x c++ -std=c++14

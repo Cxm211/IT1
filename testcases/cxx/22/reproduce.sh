@@ -1,0 +1,1 @@
+cxxbridge test.rs > test.rs.cc

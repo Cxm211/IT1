@@ -1,0 +1,19 @@
+error[E0277]: the trait bound `[u8; 44]: std::default::Default` is not satisfied
+     --> /module/target/release/build/nginx-96f1184c07e3304c/out/bindings.rs:19021:13
+      |
+19021 |             Default::default();
+      |             ^^^^^^^^^^^^^^^^ the trait `std::default::Default` is not implemented for `[u8; 44]`
+      |
+      = help: the following implementations were found:
+                <&[T] as std::default::Default>
+                <&mut [T] as std::default::Default>
+                <[T; 0] as std::default::Default>
+                <[T; 10] as std::default::Default>
+              and 31 others
+      = note: required because of the requirements on the impl of `std::default::Default` for `bindings::__BindgenBitfieldUnit<[u8; 44], u8>`
+      = note: required by `std::default::Default::default`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `nginx`.

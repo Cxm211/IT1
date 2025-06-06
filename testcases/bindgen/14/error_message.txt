@@ -1,0 +1,16 @@
+running 1 test
+test bindgen_test_layout_Packed ... FAILED
+
+failures:
+
+---- bindgen_test_layout_Packed stdout ----
+thread 'bindgen_test_layout_Packed' panicked at 'assertion failed: `(left == right)`
+  left: `12`,
+ right: `10`: Size of: Packed', layout.rs:14:5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    bindgen_test_layout_Packed
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out

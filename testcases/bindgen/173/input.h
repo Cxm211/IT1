@@ -1,0 +1,1 @@
+template <class a> struct b : a { typename b::c d; };

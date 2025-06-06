@@ -1,0 +1,1 @@
+bindgen input.hpp -o generated_bindings.rs  --block-extern-crate -- -fblocks -x c++ -std=c++14

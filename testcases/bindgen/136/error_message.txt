@@ -1,0 +1,8 @@
+error: expected type, found keyword `type`
+  --> ./closed/136/reported_bindings.rs:10:53
+   |
+10 | ...fe extern "C" fn() -> type-parameter-0-0>;
+   |                          ^^^^ expected type
+
+error: aborting due to 1 previous error
+

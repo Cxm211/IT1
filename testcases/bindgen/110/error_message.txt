@@ -1,0 +1,9 @@
+error[E0277]: the trait bound `[u8; 47]: std::fmt::Debug` is not satisfied
+     --> /home/leeopop/git/rust-dpdk/src/dpdk.rs:18040:5
+      |
+18040 |     pub __bindgen_padding_0: [u8; 47usize],
+      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `std::fmt::Debug` is not implemented for `[u8; 47]`
+      |
+      = note: `[u8; 47]` cannot be formatted using `:?`; if it is defined in your crate, add `#[derive(Debug)]` or manually implement it
+      = note: required because of the requirements on the impl of `std::fmt::Debug` for `&[u8; 47]`
+      = note: required for the cast to the object type `std::fmt::Debug`

@@ -1,0 +1,24 @@
+
+error[E0428]: the name `X_` is defined multiple times
+  --> src/main.rs:40:1
+   |
+31 | pub trait X_: Sized + std::ops::Deref {
+   | ------------------------------------- previous definition of the trait `X_` here
+...
+40 | pub trait X_: Sized + std::ops::Deref {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `X_` redefined here
+   |
+   = note: `X_` must be defined only once in the type namespace of this module
+
+error[E0119]: conflicting implementations of trait `X_` for type `X`
+  --> src/main.rs:39:1
+   |
+30 | impl X_ for X {}
+   | ------------- first implementation here
+...
+39 | impl X_ for X {}
+   | ^^^^^^^^^^^^^ conflicting implementation for `X`
+
+Some errors have detailed explanations: E0119, E0428.
+For more information about an error, try `rustc --explain E0119`.
+error: could not compile `test` (bin "test" test) due to 2 previous errors

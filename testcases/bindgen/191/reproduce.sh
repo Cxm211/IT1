@@ -1,0 +1,1 @@
+bindgen input.h --opaque-type "std::.*" -o generated_bindings.rs  -- -x c++ -std=c++17

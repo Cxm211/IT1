@@ -1,0 +1,7 @@
+thread 'main' panicked at 'Unknown token while processing namespace: ClangToken { spelling: CXString { data: 0x7f00940c0978, private_flags: 0 }, kind: 2 }', /home/jon/.cargo/registry/src/github.com-1ecc6299db9ec823/bindgen-0.51.1/src/ir/context.rs:2164:21
+stack backtrace:
+...
+  13: bindgen::ir::context::BindgenContext::module
+  14: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::parse
+  15: bindgen::parse_one
+  16: bindgen::clang::visit_children

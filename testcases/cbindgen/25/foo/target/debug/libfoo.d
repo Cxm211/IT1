@@ -1,0 +1,1 @@
+/Users/grace/Documents/GitHub/IT1/testcases/cbindgen/closed/25/foo/target/debug/libfoo.rlib: /Users/grace/Documents/GitHub/IT1/testcases/cbindgen/closed/25/foo/src/lib.rs /Users/grace/Documents/GitHub/IT1/testcases/cbindgen/closed/25/foo/src/qux/bar.rs /Users/grace/Documents/GitHub/IT1/testcases/cbindgen/closed/25/foo/src/qux.rs

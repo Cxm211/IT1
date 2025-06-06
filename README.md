@@ -33,3 +33,8 @@ We systematically analyze **320 real-world bugs** from three widely-used Rust in
   - **Cause (Sub-category)**: Labels of cause with fine-grained cause categories (e.g., `Incorrect Mutability`, `Missing Wrapper`).
   - **Cause (High-level)**: Labels of cause with the high-level cause categories (`UFC`, `INC`, `TBE`, `TRE`, etc.).
   - **Fix Pattern**: Labels of fix pattern.
+
+- [`testcases`](./testcases/) – Reproduction testcases for each issue (if available).   
+  - [`README.md`](./testcases/README.md): Provides details and reproduction instructions.
+  
+

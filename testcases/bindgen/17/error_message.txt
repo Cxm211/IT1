@@ -1,0 +1,3 @@
+wasm-ld: warning: function signature mismatch: _ZN3FooC1Ei
+>>> defined as (i32, i32) -> void in bindings.o
+>>> defined as (i32, i32) -> i32 in class.o

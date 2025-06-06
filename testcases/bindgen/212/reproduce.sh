@@ -1,0 +1,1 @@
+bindgen input.h --allowlist-function "take_file" --blocklist-type "file_t" --no-layout-tests --distrust-clang-mangling -o generated_bindings.rs  -- -x c++ -std=c++14

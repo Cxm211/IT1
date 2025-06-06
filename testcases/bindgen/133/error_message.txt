@@ -1,0 +1,6 @@
+error[E0107]: missing generics for struct `Foo_InnerType`
+  --> ./closed/133/reported_bindings.rs:16:22
+   |
+16 |     pub fn func() -> Bar;
+   |                      ^^^ expected 1 generic argument
+   |

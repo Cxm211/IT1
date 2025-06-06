@@ -1,0 +1,1 @@
+RUST_LOG="xxx=xxx" bindgen -o generated_bindings.rs input.h

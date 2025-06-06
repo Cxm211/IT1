@@ -1,0 +1,10 @@
+error: expected type, found `:`
+   --> src/main.rs:27:42
+    |
+27  |         msg_send ! (* self , f : arg1 as : arg2)
+    |                                          ^ expected type
+    |
+   ::: /Users/grace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc-0.2.7/src/macros.rs:139:33
+    |
+139 |     ($obj:expr, $($name:ident : $arg:expr)+) => ({
+    |                                 --------- while parsing argument for this `expr` macro fragment

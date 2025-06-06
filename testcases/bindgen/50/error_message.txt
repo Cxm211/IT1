@@ -1,0 +1,12 @@
+// Insert the (incorrect/buggy) generated bindings here
+error[E0588]: packed type cannot transitively contain a `[repr(align)]` type
+    --> /home/apanda/NetBricks/target/release/build/e2d2-02e086d04d42e68f/out/dpdk_bindings.rs:8890:1
+     |
+8890 | / pub struct rte_memseg {
+8891 | |     #[doc = "< Start physical address."]
+8892 | |     pub phys_addr: phys_addr_t,
+8893 | |     pub __bindgen_anon_1: rte_memseg__bindgen_ty_1,
+...    |
+8903 | |     pub nrank: u32,
+8904 | | }
+     | |_^

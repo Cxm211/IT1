@@ -1,0 +1,1 @@
+Adapter.cpp:176:25: warning: shift count >= width of type [-Wshift-count-overflow]

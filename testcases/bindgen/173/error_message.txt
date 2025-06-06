@@ -1,0 +1,29 @@
+
+error[E0072]: recursive type `b` has infinite size
+ --> ./open/173/generated_bindings.rs:5:1
+  |
+5 | pub struct b<a> {
+  | ^^^^^^^^^^^^^^^
+...
+8 |     pub d: b<a>,
+  |            ---- recursive without indirection
+  |
+help: insert some indirection (e.g., a `Box`, `Rc`, or `&`) to break the cycle
+  |
+8 |     pub d: Box<b<a>>,
+  |            ++++    +
+
+error[E0391]: cycle detected when computing when `b` needs drop
+ --> ./open/173/generated_bindings.rs:5:1
+  |
+5 | pub struct b<a> {
+  | ^^^^^^^^^^^^^^^
+  |
+  = note: ...which immediately requires computing when `b` needs drop again
+  = note: cycle used when computing whether `b<a>` needs drop
+  = note: see https://rustc-dev-guide.rust-lang.org/overview.html#queries and https://rustc-dev-guide.rust-lang.org/query.html for more information
+
+error: aborting due to 2 previous errors; 1 warning emitted
+
+Some errors have detailed explanations: E0072, E0391.
+For more information about an error, try `rustc --explain E0072`.

@@ -1,0 +1,36 @@
+thread 'main' panicked at 'assertion failed: `(left == right)`
+  left: `Some(TypeId(ItemId(13)))`,
+ right: `None`', src/ir/context.rs:725:13
+stack backtrace:
+   0: rust_begin_unwind
+   1: std::panicking::begin_panic_fmt
+   2: bindgen::ir::context::BindgenContext::add_item
+             at ./src/ir/context.rs:725:13
+   3: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty_with_id
+             at ./src/ir/item.rs:1621:17
+   4: <bindgen::ir::item::Item as bindgen::parse::ClangItemParser>::from_ty
+             at ./src/ir/item.rs:1523:9
+   5: bindgen::ir::context::BindgenContext::resolve_typerefs
+             at ./src/ir/context.rs:905:36
+   6: bindgen::ir::context::BindgenContext::gen
+             at ./src/ir/context.rs:1138:9
+   7: bindgen::codegen::codegen
+             at ./src/codegen/mod.rs:4184:5
+   8: bindgen::Bindings::generate
+             at ./src/lib.rs:2289:32
+   9: bindgen::Builder::generate
+             at ./src/lib.rs:1434:9
+  10: bindgen::main::{{closure}}
+             at ./src/main.rs:54:17
+  11: std::panicking::try::do_call
+             at /builddir/build/BUILD/rustc-1.49.0-src/library/std/src/panicking.rs:381:40
+  12: __rust_try
+  13: std::panicking::try
+             at /builddir/build/BUILD/rustc-1.49.0-src/library/std/src/panicking.rs:345:19
+  14: std::panic::catch_unwind
+             at /builddir/build/BUILD/rustc-1.49.0-src/library/std/src/panic.rs:396:14
+  15: bindgen::main
+             at ./src/main.rs:53:34
+  16: core::ops::function::FnOnce::call_once
+             at /builddir/build/BUILD/rustc-1.49.0-src/library/core/src/ops/function.rs:227:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.

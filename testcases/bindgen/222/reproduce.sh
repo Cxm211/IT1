@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --rustified-enum ".*" -- -x c++ -std=c++11 -target x86_64-pc-windows-gnu

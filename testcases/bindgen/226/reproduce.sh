@@ -1,0 +1,1 @@
+ bindgen input.h -o generated_bindings.rs --allowlist-type "Test" -- -x c++ -std=c++14

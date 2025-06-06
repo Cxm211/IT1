@@ -1,0 +1,5 @@
+error[E0412]: cannot find type `AutoValueVector_Vec` in module `root::JS`
+  --> js.rs:42:70
+   |
+42 |         assert_eq!(::std::mem::align_of::<root::JS::Rooted<root::JS::AutoValueVector_Vec>>()
+   |                                                                      ^^^^^^^^^^^^^^^^^^^ not found in `root::JS`

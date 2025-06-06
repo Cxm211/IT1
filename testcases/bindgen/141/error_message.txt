@@ -1,0 +1,1 @@
+thread 'main' panicked at 'Should have been resolved after parsing! Type { name: Some("category_type"), layout: Some(Layout { size: 1, align: 1, packed: false }), kind: ResolvedTypeRef(ItemId(43009)), is_const: false }', /home/engshare/third-party2/rust-bindgen/HEAD/src/build-centos6-native/build/libbindgen/src/ir/ty.rs:359

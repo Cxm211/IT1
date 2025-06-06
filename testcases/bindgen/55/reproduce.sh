@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs --no-recursive-allowlist --allowlist-type "local_type" --with-derive-hash --no-derive-copy --no-derive-default --raw-line "#[repr(C)] #[derive(Debug)] pub struct extern_type;" -- -x c++ -std=c++14

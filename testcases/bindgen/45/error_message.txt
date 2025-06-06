@@ -1,0 +1,7 @@
+error[E0107]: wrong number of type arguments: expected 1, found 0
+  --> ...project/target/debug/build/the-project-8f7347729392ec63/out/bindings.rs:17:16
+   |
+17 |     pub _base: Thing_Inner,
+   |                ^^^^^^^^^^^ expected 1 type argument
+
+error: aborting due to previous error

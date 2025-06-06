@@ -1,0 +1,10 @@
+error[E0412]: cannot find type `a` in module `root::Halide`
+  --> /work/git/rust-halide/hello-cpp-rs/target/debug/build/hello-cpp-a0439f5fa3eaba26/out/bindings.rs:17:50
+   |
+17 |             pub static mut Type_b: root::Halide::a;
+   |                                                  ^ not found in `root::Halide`
+   |
+help: possible candidate is found in another module, you can import it into scope
+   |
+7  |     use root::a;
+   |

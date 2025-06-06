@@ -1,0 +1,1 @@
+bindgen input.h -o generated_bindings.rs -- -target i686-pc-win32

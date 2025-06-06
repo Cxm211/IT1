@@ -1,0 +1,2 @@
+#define SOME_LONG_VAR 1234567L
+#define SOME_VAR 1234567

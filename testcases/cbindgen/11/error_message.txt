@@ -1,0 +1,49 @@
+thread 'main' panicked at 'Result has 2 params but is being instantiated with 1 values', /home/sanoj/.local/share/cargo/registry/src/github.com-1ecc6299db9ec823/cbindgen-0.14.2/src/bindgen/ir/opaque.rs:112:9
+stack backtrace:
+   0: backtrace::backtrace::libunwind::trace
+             at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.40/src/backtrace/libunwind.rs:88
+   1: backtrace::backtrace::trace_unsynchronized
+             at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.40/src/backtrace/mod.rs:66
+   2: std::sys_common::backtrace::_print_fmt
+             at src/libstd/sys_common/backtrace.rs:84
+   3: <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt
+             at src/libstd/sys_common/backtrace.rs:61
+   4: core::fmt::write
+             at src/libcore/fmt/mod.rs:1025
+   5: std::io::Write::write_fmt
+             at src/libstd/io/mod.rs:1426
+   6: std::sys_common::backtrace::_print
+             at src/libstd/sys_common/backtrace.rs:65
+   7: std::sys_common::backtrace::print
+             at src/libstd/sys_common/backtrace.rs:50
+   8: std::panicking::default_hook::{{closure}}
+             at src/libstd/panicking.rs:193
+   9: std::panicking::default_hook
+             at src/libstd/panicking.rs:210
+  10: std::panicking::rust_panic_with_hook
+             at src/libstd/panicking.rs:475
+  11: rust_begin_unwind
+             at src/libstd/panicking.rs:375
+  12: std::panicking::begin_panic_fmt
+             at src/libstd/panicking.rs:326
+  13: <cbindgen::bindgen::ir::opaque::OpaqueItem as cbindgen::bindgen::ir::item::Item>::instantiate_monomorph
+  14: cbindgen::bindgen::ir::ty::Type::add_monomorphs
+  15: cbindgen::bindgen::library::Library::generate
+  16: cbindgen::bindgen::builder::Builder::generate
+  17: cbindgen::main
+  18: std::rt::lang_start::{{closure}}
+  19: std::rt::lang_start_internal::{{closure}}
+             at src/libstd/rt.rs:52
+  20: std::panicking::try::do_call
+             at src/libstd/panicking.rs:292
+  21: __rust_maybe_catch_panic
+             at src/libpanic_unwind/lib.rs:78
+  22: std::panicking::try
+             at src/libstd/panicking.rs:270
+  23: std::panic::catch_unwind
+             at src/libstd/panic.rs:394
+  24: std::rt::lang_start_internal
+             at src/libstd/rt.rs:51
+  25: main
+  26: __libc_start_main
+  27: _start

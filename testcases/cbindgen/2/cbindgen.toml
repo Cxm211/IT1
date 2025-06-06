@@ -1,0 +1,7 @@
+language = "C++"
+
+[macro_expansion]
+bitflags = true
+
+[const]
+allow_constexpr = true

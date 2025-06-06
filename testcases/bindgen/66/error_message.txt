@@ -1,0 +1,4 @@
+---- bindgen_test_layout_bpf_raw_tracepoint_args stdout ----
+thread 'bindgen_test_layout_bpf_raw_tracepoint_args' panicked at 'assertion failed: `(left == right)`
+  left: `1`,
+ right: `8`: Alignment of bpf_raw_tracepoint_args', src/main.rs:52:5

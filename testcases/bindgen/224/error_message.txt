@@ -1,0 +1,6 @@
+error[E0080]: evaluation of constant value failed
+  --> ./open/224/generated_bindings.rs:19:30
+   |
+19 | ...ox"][::std::mem::size_of::<tcmu_mailbox>() - 128usize];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ attempt to compute `64_usize - 128_usize`, which would overflow
+

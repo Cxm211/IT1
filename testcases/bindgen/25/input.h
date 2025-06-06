@@ -1,0 +1,1 @@
+extern const int foo[1];
