@@ -2,7 +2,8 @@
 
 This folder contains testcases that reproduce reported bugs from our dataset of three C/C++ and Rust interop tools.
 
-Each subfolder corresponds to one issue (e.g., `bindgen/1`, `cbindgen/1`, `cxx/1`), named using our dataset's unique ID.
+Each subfolder corresponds to one issue (e.g., `bindgen/1`, `cbindgen/1`, `cxx/1`), named using our dataset's unique ID. 
+We also annotate folder names with the suffix `(Pass)` for open issues that pass the provided testcases, although we cannot guarantee the issue is fully fixed until it is officially confirmed by the tool developers.
 
 ---
 
@@ -29,7 +30,7 @@ A typical testcase folder contains:
 | `error_message.txt` | User-reported error message. |
 | `cbindgen.toml` | Configuration file for Cbindgen. |
 
-> Note: Some testcases may include additional files depending on the issue context.
+> Note: Some testcases may include additional files depending on the issue context. 
 
 ---
 ### CXX
